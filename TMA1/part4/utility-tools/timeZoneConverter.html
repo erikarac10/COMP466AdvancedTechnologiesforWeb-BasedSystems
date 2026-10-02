@@ -1,0 +1,46 @@
+<!-- 4. Timezone converter tool -->
+<section id="additionalToolSection">
+    <h2>Canadian Time-Zone Converter</h2>
+    <p>Enter a time and date you want to convert in the time and date fields below. Select your current timezone in the 'From' field. Then, select the target timezone in the 'To' field.</p>
+    <div class="flexDiv">
+      <p>Enter time and Date:</p>
+      <input type="time" id="timeInput">
+      <input type="date" id="dateInput">
+      <p>From:</p>
+      <!-- all Canadian timezones -->
+      <select id="timezoneInput">
+        <option value="PST">Pacific Standard Time (PST)</option>
+        <option value="PDT">Pacific Daylight Time (PDT)</option>
+        <option value="MST">Mountain Standard Time (MST)</option>
+        <option value="MDT">Mountain Daylight Time (MDT)</option>
+        <option value="CST">Central Standard Time (CST)</option>
+        <option value="CDT">Central Daylight Time (CDT)</option>
+        <option value="EST">Eastern Standard Time (EST)</option>
+        <option value="EDT">Eastern Daylight Time (EDT)</option>
+        <option value="AST">Atlantic Standard Time (AST)</option>
+        <option value="ADT">Atlantic Daylight Time (ADT)</option>
+        <option value="NST">Newfoundland Standard Time (NST)</option>
+        <option value="NDT">Newfoundland Daylight Time (NDT)</option>
+      </select>
+      <p>To:</p>
+      <select id="timezoneOutput">
+        <option value="PST">Pacific Standard Time (PST)</option>
+        <option value="PDT">Pacific Daylight Time (PDT)</option>
+        <option value="MST">Mountain Standard Time (MST)</option>
+        <option value="MDT">Mountain Daylight Time (MDT)</option>
+        <option value="CST">Central Standard Time (CST)</option>
+        <option value="CDT">Central Daylight Time (CDT)</option>
+        <option value="EST">Eastern Standard Time (EST)</option>
+        <option value="EDT">Eastern Daylight Time (EDT)</option>
+        <option value="AST">Atlantic Standard Time (AST)</option>
+        <option value="ADT">Atlantic Daylight Time (ADT)</option>
+        <option value="NST">Newfoundland Standard Time (NST)</option>
+        <option value="NDT">Newfoundland Daylight Time (NDT)</option>
+      </select>
+    </div>
+    <br>
+    <p id="timeInputResult" class="pUtility"></p>
+    <!-- will output the time user entered -->
+    <p id="timeOutputResult" class="pUtility"></p>
+    <!-- will output the time conversion results -->
+</section>

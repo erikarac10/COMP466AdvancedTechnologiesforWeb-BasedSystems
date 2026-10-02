@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <title>Unit 1: HTML/CSS</title>
+    <question>
+        <text>What extension should you save a HyperText Markup Language file in?</text>
+        <answer correct="false">.css</answer>
+        <answer correct="true">.html</answer>
+        <answer correct="false">.hml</answer>
+    </question>
+    <question>
+        <text>In CSS, how do you apply styles to a specific element with a defined ID?</text>
+        <answer correct="true">#message {...}</answer>
+        <answer correct="false">.message {...}</answer>
+        <answer correct="false">message {...}</answer>
+    </question>
+    <question>
+        <text>What does a CSS file do?</text>
+        <answer correct="false">Defines rules for encoding documents</answer>
+        <answer correct="false">Make a web page interactive and dynamic</answer>
+        <answer correct="true">Style and layout web pages</answer>
+    </question>
+</quiz>

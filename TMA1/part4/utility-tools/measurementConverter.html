@@ -1,0 +1,104 @@
+<!-- 2. Measurement converter section -->
+<section id="measurementConverterSection">
+    <!-- hide on page load -->
+    <p>Use these tools to convert various measurements. The available tools are Weight, Length, Area, and Volume.</p>
+    <!-- Weight Converter -->
+    <h3>Weight Converter</h3>
+    <div class="flexDiv">
+      <!-- new div... for styling -->
+      <p>Enter weight:</p>
+      <!-- Enter weight text -->
+      <input type="number" id="weightInput">
+      <!-- Input box for user to enter in weight -->
+      <select id="weightInputDropdown">
+        <!-- create a dropdown for weight measurement want to convert to -->
+        <option value="kg">Kilograms (kg)</option>
+        <!-- options are kilograms, pounds, stone -->
+        <option value="lbs">Pounds (lbs)</option>
+        <option value="st">Stone (st)</option>
+      </select>
+      <p>Convert to:</p>
+      <!--convert to text -->
+      <select id="weightOutputDropdown">
+        <!-- dropdown menu for what the user wants to convert it to-->
+        <option value="kg">Kilograms (kg)</option>
+        <option value="lbs">Pounds (lbs)</option>
+        <option value="st">Stones (st)</option>
+      </select>
+    </div>
+    <br>
+    <p id="weightResult" class="pUtility"></p>
+    <!-- Will hold the text results of the results -->
+    <!-- Length Converter -->
+    <h3>Length Converter</h3>
+    <div class="flexDiv">
+      <p>Enter length:</p>
+      <input type="number" id="lengthInput">
+      <!-- length user input -->
+      <select id="lengthInputDropdown">
+        <option value="m">Meters (m)</option>
+        <option value="ft">Feet (ft)</option>
+        <option value="cm">Centimeters (cm)</option>
+        <option value="in">Inches (in)</option>
+      </select>
+      <p>Convert to:</p>
+      <!--convert to text -->
+      <select id="lengthOutputDropdown">
+        <option value="m">Meters (m)</option>
+        <option value="ft">Feet (ft)</option>
+        <option value="cm">Centimeters (cm)</option>
+        <option value="in">Inches (in)</option>
+      </select>
+    </div>
+    <br>
+    <p id="lengthResult" class="pUtility"></p>
+    <!-- Will hold the text results of the results -->
+    <!-- Area Converter -->
+    <h3>Area Converter</h3>
+    <div class="flexDiv">
+      <p>Enter area:</p>
+      <input type="number" id="areaInput">
+      <!-- area user input -->
+      <!-- dropdown  -->
+      <select id="areaInputDropdown">
+        <option value="m_sq">Meters² (m²)</option>
+        <option value="ft_sq">Feet² (ft²)</option>
+        <option value="cm_sq">Centimeters² (cm²)</option>
+        <option value="in_sq">Inches² (in²)</option>
+      </select>
+      <p>Convert to:</p>
+      <!--convert to text -->
+      <select id="areaOutputDropdown">
+        <option value="m_sq">Meters² (m²)</option>
+        <option value="ft_sq">Feet² (ft²)</option>
+        <option value="cm_sq">Centimeters² (cm²)</option>
+        <option value="in_sq">Inches² (in²)</option>
+      </select>
+    </div>
+    <br>
+    <p id="areaResult" class="pUtility"></p>
+    <!-- Will hold the text results of the results -->
+    <!-- Volume Converter -->
+    <h3>Volume Converter</h3>
+    <div class="flexDiv">
+      <p>Enter volume:</p>
+      <input type="number" id="volumeInput">
+      <select id="volumeInputDropdown">
+        <option value="l">Liters (L)</option>
+        <option value="gal">Gallons (gal)</option>
+        <option value="ml">Milliliters (ml)</option>
+        <option value="oz">Ounces (oz)</option>
+      </select>
+      <p>Convert to:</p>
+      <!--convert to text -->
+      <select id="volumeOutputDropdown">
+        <option value="l">Liters (L)</option>
+        <option value="gal">Gallons (gal)</option>
+        <option value="ml">Milliliters (ml)</option>
+        <option value="oz">Ounces (oz)</option>
+      </select>
+    </div>
+    <br>
+    <p id="volumeResult" class="pUtility"></p>
+    <!-- Will hold the text results of the results -->
+</section>

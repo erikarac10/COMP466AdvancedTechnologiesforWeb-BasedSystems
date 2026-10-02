@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- xml declaration -->
+<?xml-stylesheet type="text/xsl" href="resume.xsl" ?> <!-- tell XML parser to apply an XSL stylesheet to the XML document (resume.xsl) -->
+<resume xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="resume resume.xsd"> <!-- reference the associated XSD for optional validation -->
+<!-- 
+
+COMP 466 Advanced Technologies for Web-Based Systems
+TMA 1
+
+Erika Racette
+
+This is the xml file used for part 1
+
+-->
+<!-- <resume> root element -->
+    <general> <!-- general section -->
+        <name>Erika Racette</name> <!-- name, objective, phone, email, address -->
+        <objective>Seeking a challenging role in software development to apply my skills and knowledge, contributing to innovative solutions and professional growth.</objective>
+        <phone>+1 (604) 123-4567</phone>
+        <email>erika@gmail.com</email>
+        <address>1234 W Hastings St, Vancouver, British Columbia</address>
+    </general> <!-- end the general section -->    
+    <education> <!-- education section -->
+        <degree>Bachelor of Science in Computer Science</degree>
+        <university>Athabasca University</university>
+        <graduationYear>2050</graduationYear>
+    </education>
+    <experience> <!-- experience section -->
+        <job> <!-- add a job -->
+            <title>Research Assistant</title> <!-- title, company, start date, end date, responsibilities -->
+            <company>Athabasca University</company>
+            <startDate>2022-06-01</startDate>
+            <endDate>Present</endDate> <!-- Changed to string to handle 'Present' -->
+            <responsibilities> <!-- add a responsibility for the section -->
+                <responsibility>Develop web applications</responsibility>
+                <responsibility>Maintaining web servers</responsibility>
+                <responsibility>Collaborating in a team</responsibility>
+            </responsibilities>
+        </job>
+    </experience>
+
+</resume>

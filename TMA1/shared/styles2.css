@@ -1,0 +1,196 @@
+/* 
+
+COMP 466 Web-Based Systems
+TMA 1
+
+Erika Racette
+
+This is the style sheet used for parts 2, 3 and 4
+
+Background wallpaper retrieved with free use from: https://wallpaper.dog/sanrio-cinnamoroll 
+
+*/
+
+header {
+    text-align: center; /*Center the text */
+    padding: 1em 0; /*Add header padding*/
+
+    background-color: #6abdcb;
+    color: #ffffff;
+}
+
+/* body style */
+body {
+    font-family: 'Century Gothic', sans-serif; /* the font that will be used */
+    
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* full height of the viewport */
+    width: 10%; /*Only take up a bit space on the side*/
+    position: fixed;
+    padding-top: 1em; /* Add some padding at the top */
+    
+    background-color: #e5fcfc;
+}
+
+nav a {
+    padding: 10%;
+    text-decoration: none; /* No link lines*/
+    margin-bottom: 1em; /* Add vertical space between nav items */
+    font-size: clamp(0.6rem, 1.3vw, 1.2rem); /* Responsive font size */
+    
+    transition: all 0.3s ease;
+    color: #277987;
+}
+
+/* On nav item hover... */
+nav a:hover,
+nav a.active {
+    transform: scale(1.1); /*Enlarge a bit*/
+
+    color: #e5fcfc;
+    background-color: #92ddea;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Web apps that have a sidebar (part 2 and 4) */
+.mainWithSidebar {
+    margin-left: 12%; /* Adjust to make space for the nav bar */
+}
+
+/*All button styles*/
+button {
+    padding: 0.5em 1em;
+    color: #e5fcfc;
+    border: none; /* No border */
+    border-radius: 5px; /*Rounded edges*/
+    cursor: pointer; /*Let user know it's clickable */
+
+    font-size: clamp(0.9rem, 1.5vw, 1.6rem); /* Font size */
+    
+    background-color: #277987;
+    transition: background-color 0.3s ease; /*Animation for color change*/
+}
+
+button:hover {
+    background-color: #92ddea; /*Change background color when hovered*/
+}
+
+/****************************
+    Styles for Part 2
+*****************************/
+
+/*Adjust styles for the unit buttons*/
+.unit1QuizBtn, .unit2QuizBtn, .unit3QuizBtn {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 3%;
+}
+
+/*How the buttons are layed out in the quizzes section*/
+#quizButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Submit quiz button*/
+#submitBtn {
+    margin-top: 2%;
+}
+
+/****************************
+    Styles for Part 3
+*****************************/
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Side buttons class*/
+.side-button {
+    height: 10vh;
+    width: 5%;
+
+    font-size: larger;
+}
+
+/*The image container*/
+#slideshowCanvas {
+    margin: 1em; /* Add margin to the canvas */
+}
+
+/* The controls for the slideshow */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3%; /*Add some space between the buttons */
+}
+
+/*Caption for all the images */
+#caption {
+    display: flex;
+    justify-content: center;
+}
+
+/*Drop down menu style 
+#transitionEffectSelection, #sequentialOrderSelection {
+    width: 20%;
+    background-color: #e5fcfc;
+    color: #277987;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em;
+    transition: background-color 0.3s ease;
+
+}
+*/
+select {
+    width: 20%;
+    background-color: #e5fcfc;
+    color: #277987;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+/****************************
+    Styles for Part 4
+*****************************/
+/*Input fields*/
+input {
+    width: 10%;
+}
+
+/*Let dropdown menu text go to the next line*/
+select {
+    white-space: normal;
+}
+
+.convertBtn {
+    margin-left: 1%;
+}
+
+.flexDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pUtility {
+    margin-left: 3%;
+    text-decoration: underline; /*Underline the text */
+}

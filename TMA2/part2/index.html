@@ -1,0 +1,216 @@
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>COMP466 - TMA2</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="../shared/styles/styles2.css"> <!-- link to the location of the CSS style sheet -->
+        <link rel="icon" href="../shared/styles/favicon.ico" type="image/x-icon"> <!-- link to tab icon -->
+    </head>
+
+    <body> <!-- web page content -->
+        <!-- 
+        COMP 466 Web-Based Systems
+        TMA 2
+
+        This is the index page (user learning app homepage) for TMA 2 part 2
+        -->
+
+        <nav id="nav-bar">
+            <a href="#" id="link-0">Login</a> <!-- User's learning app login tab -->
+            <a href="#" id="link-1" style="display: none;">Admin</a> <!-- hidden for regular users + info/documentation -->
+                <div id="sub-nav">
+                    <a href="#" id="sub-nav-1" class="sub-nav-link">New Unit</a> <!-- create a new unit -->
+                    <a href="#" id="sub-nav-2" class="sub-nav-link">Replace Unit</a> <!-- replace unit contents-->
+                    <a href="#" id="sub-nav-3" class="sub-nav-link">Delete Unit</a> <!-- delete a unit-->
+                </div>
+            <div id="unit-links">
+                <!-- unit links will be placed here-->
+            </div>
+            <!--<a href="../shared/php/logout.php" id="link-3">Logout</a> <!-- add logout link -->
+        </nav>
+
+        <main id="main-content"> <!-- where each menu item content will be placed -->
+            <header> <!-- banner title -->
+                <h1 id="header-title">♡ Web Learning App ♡</h1>
+            </header>
+
+            <!-- Online Learning App home section  -->
+            <section id="section-0">
+                <iframe id="frame-1" src="../shared/php/authentication.php" frameborder="0"></iframe> <!-- iframe for authentication -->
+            </section>
+
+            <!-- This section is hidden from regular users. Unit management area -->
+            <section id="section-1" style="display: none;">
+                <!-- How to use area -->
+                <p>Welcome to the Online Learning Management System, where both learners and educators can access a small-scale interactive learning system for online courses.</p>
+
+                <h3>For Teachers and Admins:</h3>
+                <ol>
+                    <li><strong>Create and Manage Units:</strong> As a subject matter expert, you have the ability to create, update, and delete learning units to customize the curriculum.</li><!-- 1 -->
+                    <li><h4>Uploading Lessons and Quizzes</h4> <!-- 2 -->
+                        <p><u>How to upload course content and quizzes using the custom XML format:</u></p>
+                        <ul>
+                            <li>Lessons must be saved in XML format (fil extension .xml). You can use the Notepad app to save the file with a .xml extension.</li>
+                            <li>Each lesson must include at least one question with three answer choices, where only one answer is correct.</li>
+                            <li>(Optional) You can attach a media file that will be displayed at the end of each lesson.</li>
+                        </ul>
+
+                        <h5>Lesson and Quiz Format</h5>
+                        <pre class="shadow-box"><code>
+&lt;unit&gt; <span style="color: red;"> <---- You can use any title you like here (unit, lesson, course) </span>
+    &lt;title&gt;Your Lesson Title&lt;/title&gt;
+    &lt;content&gt; <span style="color: red;"> <---- Indicate the start of the container tag, which will hold all your learning content </span>
+        &lt;header&gt;Headers can be used throughout lesson and will be transformed to a header title&lt;/header&gt;
+        &lt;text&gt;Lesson content wrapped within text here wll be transformed into a paragraph &lt;/text&gt;
+
+        &lt;list&gt; <span style="color: red;"> <---- Indicate the start of a list. All items within this will become bullet points</span>
+            &lt;item&gt;Bullet Point 1&lt;/item&gt;
+            &lt;item&gt;Bullet Point 2&lt;/item&gt;
+        &lt;/list&gt; 
+
+        &lt;text&gt;You can have as many as < header >, < text >, < list > and < item > tags within content as you like &lt;/text&gt;
+    &lt;/content&gt;
+                        
+    &lt;questions&gt; <span style="color: red;"> <---- Start of the questions container</span>
+        &lt;question&gt; <span style="color: red;"> <---- Indicates the start of a new question </span>
+            &lt;text&gt;Text of first quiz question here&lt;/text&gt;
+            &lt;answers&gt; <span style="color: red;"> <---- Indicates the start of the question's answer options </span>
+                &lt;answer correct="false"&gt;List off 3 possible answers&lt;/answer&gt; 
+                &lt;answer correct="false"&gt;Mark an incorrect answer by setting the value to false&lt;/answer&gt;
+                &lt;answer correct="true"&gt;Mark the correct answer by setting the value to true&lt;/answer&gt;
+            &lt;/answers&gt;
+        &lt;/question&gt; <span style="color: red;"> <---- End of this specific question </span>
+        
+        ... More questions may be entered in here if desired
+
+     &lt;/questions&gt; <---- End of all the lesson's questions
+&lt;/unit&gt; <---- End of the entire unit/lesson/content
+                        </code></pre>
+
+                        <h5>HTML Special Character Codes</h5>
+                        <p>Some characters cannot be used directly in HTML content and must be replaced with:</p>
+                        <ul>
+                            <li><b>&amp;lt;</b> = < (Less-than sign)</li>
+                            <li><b>&amp;gt;</b> = > (Greater-than sign)</li>
+                            <li><b>&amp;amp;</b> = & (Ampersand)</li>
+                        </ul>
+                        <br>
+                        <i>Can see more here: <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">https://www.w3schools.com/html/html_entities.asp</a></i>
+
+                        <h5>Important Notes</h5>
+                        <ul>
+                            <li>All tags (<code>&lt;tags&gt;</code>) must have corresponding closing tags.</li>
+                            <li>Each lesson must include at least one question.</li>
+                            <li>Each question must have exactly three answer choices.</li>
+                            <li>Only one answer should be marked correct using <code>correct="true"</code>.</li>
+                            <li>Valid formats for optional media files are: JPEG/JPG, PNG, MP3, MP4</li>
+                        </ul>
+                    </li> <!-- 2 -->
+                    <li><h4>Example Lesson:</h4> <!-- 3 -->
+                        <pre class="shadow-box"><code>
+&lt;unit&gt;
+    &lt;title&gt;Introduction to Web Tech&lt;/title&gt;
+    &lt;content&gt;
+        &lt;header&gt;Welcome to the Web Tech Tutorial!&lt;/header&gt;
+        &lt;text&gt;In this tutorial, you will learn about HTML, CSS, JavaScript, &amp;amp; XML.&lt;/text&gt;
+        &lt;header&gt;This is a code sample:&lt;/header&gt;
+        
+        &lt;text&gt;document.getElementById('id');&lt;/text&gt;
+
+        &lt;text&gt;You may be wondering, what language is this synatx in?&lt;/text&gt;
+        &lt;list&gt;
+            &lt;item&gt;HTML?&lt;/item&gt;
+            &lt;item&gt;CSS?&lt;/item&gt;
+        &lt;/list&gt;
+        &lt;text&gt;The answer is: Javascript!&lt;/text&gt;
+    &lt;/content&gt;
+    &lt;questions&gt;
+        &lt;question&gt;
+            &lt;text&gt;What will you learn in this Web App?&lt;/text&gt;
+            &lt;answers&gt;
+                &lt;answer correct="true"&gt;Create a web page that shows a person's favorite foods.&lt;/answer&gt;
+                &lt;answer correct="false"&gt;Use Java, C++, and Python to build websites.&lt;/answer&gt;
+                &lt;answer correct="false"&gt;Write C++ programs for web applications.&lt;/answer&gt;
+            &lt;/answers&gt;
+        &lt;/question&gt;
+    &lt;/questions&gt;
+&lt;/unit&gt;
+                        </code></pre>
+
+                        <p>The inner of the content will show up as:</p>
+
+                        <div class="shadow-box"> <!-- example -->
+                            <h2>Welcome to the Web Tech Tutorial!</h2>
+                            <p>In this tutorial, you will learn about HTML, CSS, JavaScript & XML.</p>
+                            <h2>This is a code sample:</h2>
+                            
+                            <p>document.getElementById('id');</p>
+
+                            <p>You may be wondering, what language is this syntax in?</p>
+                            <ul>
+                                <li>HTML?</li>
+                                <li>CSS?</li>
+                            </ul>
+                            <p>The answer is: Javascript!</p>
+                        </div> <!-- example -->
+                    </li> <!-- 3 -->
+                </ol>
+            </section>
+
+            <!-- upload XML div -->
+            <form id="upload-form" enctype="multipart/form-data" style="display: none;">
+                <label for="new-xml-file">Select XML File:</label>
+                <br>
+                <input type="file" id="new-xml-file" name="xml-file" accept=".xml" required>
+                <br>
+                <label>(Optional) Select Unit Media:</label>
+                <input type="file" id="media-file" name="media-file" accept=".jpeg,.jpg,.png,.mp3,.mp4">
+                <button id="button-1" type="submit" class="admin-button">Upload New Unit</button>
+            </form>
+    
+            <!-- drop down div -->
+            <form id="drop-down-form" style="display: none;" style="display: none;">
+                <input type="hidden" id="unitId" name="unit_id" value=""> <!-- The unit id (if deleting) -->
+                <label for="unit-select">Select Unit:</label>
+                <br>
+                <select id="unit-select">
+                    <!-- options will be listed here -->
+                    <!--<option value = unit_id></option>-->
+                </select>
+                <button id="button-2" type="submit" class="admin-button">Replace Unit</button>
+                <button id="button-3" type="submit" class="admin-button">Delete Unit</button>
+            </form>
+
+            <div id="unit-content-div">
+                <!-- unit content will be placed here-->
+            </div>
+
+            <div id="unit-quiz-div" style="display:none;"> <!-- General template for all the quizzes -->
+                <div id="unit-quiz-content">
+
+                    <!-- Quiz content will be loaded here -->
+
+                </div>
+                <br>
+                <button id="submit-btn" style="width:50%">Submit Quiz</button>
+                <p id="quiz-message"></p> <!-- Any incorrect messages will be inserted here-->
+                <h3 id="quiz-results" style="display:none;">Quiz Results:</h3>
+                <p id="user-results"></p> <!-- The user's quiz score will be loaded here -->
+            </div>
+
+            <p id="message"></p>
+
+        </main> <!-- end menu item content -->
+        
+        <!-- link the JavaScript file that will be used for the main page -->
+        <script src="../shared/js/script-navbar.js"></script>
+        <script src="js/script-admin.js"></script> <!-- use script for admin functions -->
+        <script src="js/script-learner.js"></script> <!-- use script for learner functions -->
+
+    </body>
+
+</html>

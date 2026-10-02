@@ -1,0 +1,515 @@
+<!-- 
+
+COMP 466 Advanced Technologies for Web-Based Systems
+TMA 1
+
+Erika Racette
+June 15, 2024 - August 8, 2024
+Estimated hours: 60
+
+This is the html file of a Web App that fulfills the requirements of part 2 of TMA 1.
+
+-->
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Tech Learning</title> <!-- title of the web app -->
+        <link rel="stylesheet" href="../shared/styles2.css"> <!-- use the web app style sheet -->
+    </head>
+    <body>
+        <nav>
+            <a href="#" id="homeLink">Home</a> <!-- main about page with landing/starting info-->
+            <a href="#" id="unit1Link">Unit 1</a> <!-- html+css course -->
+            <a href="#" id="unit2Link">Unit 2</a> <!-- javacsript course -->
+            <a href="#" id="unit3Link">Unit 3</a> <!-- xml course -->
+            <a href="#" id="quizzesLink">Quizzes</a> <!-- quizzes tab to access all quizzes-->
+        </nav>
+        <main class="mainWithSidebar"> <!-- this web app has a sidebar -->
+            <header>
+                <h1 id="title">♡ Web Tech Learning ♡</h1>
+            </header>
+            <section id="homeSection">
+                <h2>Welcome to the Web Tech Tutorial!</h2>
+                <p>In this tutorial, you will learn how to use simple HTML, CSS, Javascript, and XML.
+                    <br>Throughout the course you will learn how to create a simple web page that shows a person's favorite foods! 
+                    <br><br>This Web Learning App is divided into three units:</p>
+                <ul>
+                    <li><strong>Unit 1: HTML/CSS</strong> - Learn how to create and style web pages.</li>
+                    <li><strong>Unit 2: JavaScript</strong> - Learn how to make your web pages interactive and dynamic.</li>
+                    <li><strong>Unit 3: XML</strong> - Learn about XML and how it is used in web development.</li>
+                </ul>
+                <p>The end of each unit has a quiz. <br>
+                    Test your knowledge and what you have learned for each course!</p>
+            </section>
+            <section id="unit1Section" style="display:none;"> <!-- HTML/CSS: don't display section 1 when page is loaded -->
+                <h2>Learn how to create and style web pages</h2>
+
+                <h3>HTML (HyperText Markup Language)</h3>
+                <p>HTML is the standard markup language for creating web pages. It tells the web browser how to structure a web page.
+                    <br>This is done using elements like headings, paragraphs, links, and images.</p>
+                <h4>Page Structure Elements:</h4>
+                <ul>
+                    <li>&lt;html&gt; - Tells the Web Browser that the file is an HTML document.</li>
+                    <li>&lt;head&gt; - Contains metadata about the HTML document, including links to stylesheets (CSS Covered below).</li>
+                    <li>&lt;header&gt; - Represents introduction content or navigational links.</li>
+                    <li>&lt;body&gt; - What the content of the HTML will have, such as text and images.</li>
+                    <li>&lt;main&gt; - Represents the body content of the of the web page.</li>
+                    <li>&lt;section&gt; - Defines a section, used to group related content together.</li>
+                    <li>&lt;h1&gt; - Represents a header, used as titles of sections. &lt;h1&gt; is the highest level heading (h1-h6).</li>
+                    <li>&lt;p&gt; - Defines a paragraph of text.</li>
+                    <li>&lt;button&gt; - Creates a button that can be clicked to trigger an action.</li>
+                    <li>&lt;div&gt; - Creates a section that will be styled with CSS.</li>
+                    <li>&lt;footer&gt; - Represents the footer for the page.</li>
+                </ul>
+                <p>Tags may also have a specific ID, so we can target them specifically.</p>
+
+                <h4>New Input Types:</h4>
+                <p>HTML5 also features different types of input the user can make on the page.</p>
+                <ul>
+                    <li>&lt;input type="email"&gt; - Takes an email address, the browser will validate the format of your input.</li>
+                    <li>&lt;input type="tel"&gt; - Takes a telephone number.</li>
+                    <li>&lt;input type="url"&gt; - Takes a URL. The browser will validate the format of your URL input.</li>
+                    <li>&lt;input type="number"&gt; - Takes numeric values, with set minimum and maximum values.</li>
+                    <li>&lt;input type="range"&gt; - Makes a slider for values within a range.</li>
+                    <li>&lt;input type="date"&gt;- Makes a date picker for selecting dates and converts the input into a date format.</li>
+                </ul>
+
+                <h4>Example HTML:</h4>
+
+                <!-- Legend
+                    &lt; =   less-than sign: <
+                    &gt; =   greater-than sign: >
+                    &le; =   less-than or equals sign: ≤
+                    &ge; =   greater-than or equals sign: ≥
+                -->
+                <!--CODE EXAMPLE-->
+                <pre><code> <!-- use pre and code tags to show code examples-->
+&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;title&gt;My First Web Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+        &lt;h1 id="greetings"&gt;My Header!&lt;/h1&gt;
+            &lt;nav&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#foodsSection"&gt;Foods&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#formSection"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+                            
+        &lt;main&gt;
+            &lt;section id="home"&gt;
+                &lt;p id="message"&gt;This is the home section.&lt;/p&gt;
+                &lt;button id="buttonID"&gt;Click Me!&lt;/button&gt;
+            &lt;/section&gt;
+                                
+            &lt;div id="foodsSection" style="background-color: lightblue;"&gt;
+                &lt;!-- Food content will be loaded here when button is clicked --&gt;
+            &lt;/div&gt;
+                                    
+            &lt;aside&gt;
+                &lt;p&gt;Some content aside from the content it's placed in.&lt;/p&gt;
+            &lt;/aside&gt;
+                                    
+            &lt;section id="formSection"&gt;
+                &lt;h2&gt;Contact Us&lt;/h2&gt;
+                &lt;form&gt;
+                    &lt;label for="email"&gt;Email:&lt;/label&gt;
+                    &lt;input type="email" name="email" placeholder="example@example.com" required&gt;
+                    &lt;br&gt;
+                                                
+                    &lt;label for="phone"&gt;Phone:&lt;/label&gt;
+                    &lt;input type="tel" name="phone" placeholder="123-456-7890"&gt;
+                    &lt;br&gt;
+                                                
+                    &lt;label for="website"&gt;Website:&lt;/label&gt;
+                    &lt;input type="url" name="website" placeholder="https://example.com"&gt;
+                    &lt;br&gt;
+                                                
+                    &lt;label for="quantity"&gt;Quantity:&lt;/label&gt;
+                    &lt;input type="number" name="quantity" min="1" max="100" value="1"&gt;
+                    &lt;br&gt;
+                                                
+                    &lt;label for="volume"&gt;Volume:&lt;/label&gt;
+                    &lt;input type="range" name="volume" min="0" max="100" value="50"&gt;
+                    &lt;br&gt;
+                                                
+                    &lt;label for="birthdate"&gt;Birthdate:&lt;/label&gt;
+                    &lt;input type="date" name="birthdate"&gt;
+                    &lt;br&gt;
+                                                
+                    &lt;input type="submit" value="Submit"&gt;
+                &lt;/form&gt;
+            &lt;/section&gt;
+        &lt;/main&gt;
+                                
+        &lt;footer&gt;
+            &lt;p&gt;&copy; 2024 My Food Website.&lt;/p&gt;
+        &lt;/footer&gt;
+                                
+        &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+
+                <i>To see more input types, visit <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">W3Schools HTML Form Input Types</a></i>
+
+                <!-- Create instructions -->
+                <h3>Creating Your First HTML File</h3>
+                <p>To create an HTML file, follow these steps:</p>
+                <ol>
+                    <li>Open a text editor, such as Notepad.</li>
+                    <li>Create a new file and save it.</li>
+                    <li>Copy the above HTML Example code and paste it into the file.</li>
+                    <li>Name it whatever you like, and save it with a <code>.html</code> extension. Example: <code>index.html</code>.</li>
+                </ol>
+                    
+                <h3>CSS (Cascading Style Sheets)</h3>
+                <p>CSS is used to style and layout web pages. 
+                    You can change the color, font, size, spacing, and layouts using CSS.</p>
+
+                <h4>Basic CSS Styling:</h4>
+                <ul>
+                    <li>Display: <code>display: flex;</code>
+                        <br> - Defines a flex container to enable flexible layout for its child elements.</li>
+                    <li>Flex-Direction: <code>flex-direction: column;</code>
+                        <br> - Specifies the direction of the flexible items inside a flex container in column direction</li>
+                    <li>Align-Items: <code>align-items: center;</code>
+                        <br> - Aligns flex items along the cross axis of the flex container with center alignment.</li>
+                    <li>Background Color: <code>background-color: #ddbfbf;</code>
+                        <br> - Sets the background color to the hexadecimal color code #ddbfbf.</li>
+                    <li>Text Color: <code>color: white;</code>
+                        <br> - Sets the color of the text content to white.</li>
+                </ul>
+                <p>You can also apply styles to only specific elements you've defined with IDs (id="greetings").</p>
+                <h4>Example CSS:</h4>
+
+                <!--CODE EXAMPLE-->
+                <pre><code>
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddbfbf;
+}
+
+#greetings {
+    background-color: #c48484;
+}
+
+#message {
+    font-size: 20px;
+    color: #fff;
+}
+                </code></pre>
+
+                <!-- Create instructions -->
+                <h3>Creating Your First CSS File</h3>
+                <p>To create a CSS file, follow these steps:</p>
+                    <ol>
+                        <li>Using the text editor you have open...</li>
+                        <li>Create a new file and save it.</li>
+                        <li>Copy the above CSS Example code and paste it into the file.</li>
+                        <li>Name it 'styles', and save it with a <code>.css</code> extension. Example: <code>styles.css</code>.</li>
+                    </ol>
+
+                <!--UNIT QUIZ BUTTON-->
+                <button class="unit1QuizBtn">Unit 1 Quiz</button>
+            </section>
+
+            <section id="unit2Section" style="display:none;"> <!-- JavaScript -->
+                <h2>Learn how to make your web pages interactive and dynamic</h2>
+
+                <h3>Basic Syntax: Variables, Data Types, Operators</h3>
+                <p>JavaScript variables are containers for storing data values. JavaScript has dynamic types, which means the same variable can hold different data types at different times.</p>
+
+                <!--CODE EXAMPLE-->
+                <pre><code>
+var a = 1;
+var b = "Hello!";
+var c = true;
+                </code></pre>
+
+                <p>JavaScript supports arithmetic operators (+, -, *, /), assignment operators (=, +=, -=), comparison operators (==, ===, !=, !==), logical operators (&&, ||, !), and more!</p>
+                
+                <h3>Functions and Events</h3>
+                <p>JavaScript functions are blocks of code designed to perform a particular task, which are executed when called.</p>
+                
+                <!--CODE EXAMPLE-->
+                <pre><code>
+//JavaScript comments are done using inline // or block /* */
+function displayMessage(message) {
+    return "The message is: " + message;
+}
+                </code></pre>
+
+                <h3>DOM Manipulation</h3>
+                <p>The Document Object Model (DOM) is an interface for web documents. It is the structure of a document, and allows you to manipulate its content and structure dynamically.</p>
+                
+                <!--CODE EXAMPLE-->
+                <pre><code>
+//DOM manipulation
+document.getElementById("message").innerHTML = "Change the message of the &lt;p&gt; tag with the ID = "message";
+                </code></pre>
+
+                <p>Events are actions that occur as a result of the user input or interacting with the browser.</p>
+                <pre><code>
+//Event handling
+document.getElementById("buttonID").addEventListener("click", function() {
+    alert("The button named 'buttonID' was clicked!");
+});
+                </code></pre>
+
+                <h3>AJAX Basics</h3>
+                <p>Asynchronous JavaScript and XML (AJAX) allows you to upload things to a web page. 
+                    It involves making XMLHttpRequests to fetch data from a server and handling the response it gave.</p>
+                <pre><code>
+//AJAX request
+var xhr = new XMLHttpRequest(); //Variable for the new XMLHttpRequest
+xhr.onreadystatechange = function() { //When it is ready, define the function that it will run once it is ready
+    if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("ajaxResponse").innerHTML = this.responseText;
+    }
+};
+
+xhr.open("GET", 'xmlFile.xml', true); //Send 'GET' request to the file "xmlFile.xml"
+xhr.send(); //Send the request/execute it
+                </code></pre>
+
+                <h4>Example Javascript:</h4>
+
+                <!--CODE EXAMPLE-->
+                <pre><code>
+//Event handling
+document.getElementById("buttonID").addEventListener("click", function() {
+    alert("The button named 'buttonID' was clicked!");
+    loadXMLFunction();
+});
+
+function loadXMLFunction() {
+    console.log("Loading XML...");
+
+    //Create an XMLHttpRequest to load XML and XSL files
+    var xmlRequest = new XMLHttpRequest();
+    var xsltRequest = new XMLHttpRequest();
+
+    //Load the XML file
+    xmlRequest.open("GET", "xmlFile.xml", true);
+    xmlRequest.onreadystatechange = function() {
+        if (xmlRequest.readyState === 4 && xmlRequest.status === 200) {
+            //Load the XSL file once the XML is loaded
+            xsltRequest.open("GET", "xsltFile.xslt", true);
+            xsltRequest.onreadystatechange = function() {
+                if (xsltRequest.readyState === 4 && xsltRequest.status === 200) {
+                    //Transform XML using XSLT
+                    transformXML(xmlRequest.responseXML, xsltRequest.responseXML);
+                }
+            };
+            xsltRequest.send();
+        }
+    };
+    xmlRequest.send();
+}
+
+function transformXML(xml, xslt) {
+    
+    if (window.XSLTProcessor) { //Check for browser compatibility
+        var processor = new XSLTProcessor();
+        processor.importStylesheet(xslt);
+
+        var resultDocument = processor.transformToFragment(xml, document); //Perform the transformation
+
+        //Insert the transformed result into the food section
+        document.getElementById("foodsSection").innerHTML = '';
+        document.getElementById("foodsSection").appendChild(resultDocument);
+    }
+}
+                </code></pre>
+
+                <!-- Create instructions -->
+                <h3>Creating Your First Javascript File</h3>
+                <p>To create a Javascript file, follow these steps:</p>
+                <ol>
+                    <li>Using the text editor you have open...</li>
+                    <li>Create a new file.</li>
+                    <li>Copy the above Javascript Example code and paste it into the file.</li>
+                    <li>Name it 'script', and save it with <code>.js</code> extension. Example: <code>script.js</code>.</li>
+                </ol>
+
+                <!--UNIT QUIZ BUTTON-->
+                <button class="unit2QuizBtn">Unit 2 Quiz</button>
+            </section>
+            
+            <section id="unit3Section" style="display:none;"> <!-- XML -->
+                <h2>Learn about XML and how it is used in web development</h2>
+                <h3>XML (eXtensible Markup Language)</h3>
+                <p>XML is a markup language that defines rules for encoding documents in human-readable and machine-readable form. 
+                    It is used to store and transport data. An XML document has nested elements, similar to HTML, but you can create your own tags.</p>
+                    
+                <h4>Example XML:</h4>
+                
+                <!--CODE EXAMPLE-->
+                <pre><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;!-- XML declaration --&gt;
+
+&lt;person&gt; &lt;!-- person element --&gt;
+    &lt;name&gt;My Name!&lt;/name&gt; &lt;!-- your name here --&gt;
+    &lt;age&gt;45&lt;/age&gt; &lt;!-- your age --&gt;
+    &lt;favoriteFoods&gt; &lt;!-- section for your favorite foods --&gt;
+        &lt;food&gt;Pizza&lt;/food&gt; &lt;!-- first favorite food --&gt;
+        &lt;food&gt;Sushi&lt;/food&gt; &lt;!-- second favorite food --&gt;
+    &lt;/favoriteFoods&gt;
+&lt;/person&gt;
+                </code></pre>
+
+                <!-- Create instructions -->
+                <h3>Creating Your First XML File</h3>
+                <p>To create an XML file, follow these steps:</p>
+                <ol>
+                    <li>Using the text editor you have open...</li>
+                    <li>Create a new file.</li>
+                    <li>Copy the above XML Example code and paste it into the file.</li>
+                    <li>Name it 'xmlFile', and save it with a <code>.xml</code> extension. Example: <code>xmlFile.xml</code>.</li>
+                </ol>
+
+                <h3>XML Schema (XSD)</h3>
+                <p>XML Schema Definition (XSD) is used to define the structure, content, and data types in the created tags of your of XML documents.</p>
+                <p>An XSD as a set of rules that your XML document must follow. It verifies that the XML file contains the right types of data, the correct hierarchy of elements and other structural constraints.</p>
+
+                <p><code>&lt;xs:element&gt;</code>: Defines a XML element's name and type.</p>
+                <p><code>&lt;xs:complexType&gt;</code>: Describes an element with nested child elements.</p>
+                <p><code>&lt;xs:sequence&gt;</code>: Defines the order and occurrences of child elements within the complex type.</p>
+
+                
+                <h4>Example XSD:</h4>
+
+                <!--CODE EXAMPLE-->
+                <pre><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+
+    &lt;!-- Define the root element 'person' for general people --&gt;
+    &lt;xs:element name="person"&gt;
+        &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element name="name" type="xs:string"/&gt; &lt;!-- A person's name --&gt;
+                &lt;xs:element name="age" type="xs:integer"/&gt; &lt;!-- A person's age --&gt;
+                &lt;xs:element name="favoriteFoods"&gt;
+                    &lt;xs:complexType&gt;
+                        &lt;xs:sequence&gt; &lt;!-- Unbounded list of fav foods --&gt;
+                            &lt;xs:element name="food" type="xs:string" maxOccurs="unbounded"/&gt; 
+                        &lt;/xs:sequence&gt;
+                    &lt;/xs:complexType&gt;
+                &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+    &lt;/xs:element&gt;
+
+&lt;/xs:schema&gt;
+                </code></pre>
+                
+                <!-- Create instructions -->
+                <h3>Creating Your First XML Schema</h3>
+                <p>To create an XML Schema, follow these steps:</p>
+
+                <ol>
+                    <li>Using the text editor you have open...</li>
+                    <li>Create a new file.</li>
+                    <li>Copy the above XSD Example code and paste it into the file.</li>
+                    <li>Name it whatever you like, and save it with a <code>.xsd</code> extension. Example: <code>xsdFile.xsd</code>.</li>
+                </ol>
+
+                <i>To validate your .XML file with the newly created .XSD, visit <a href="https://www.liquid-technologies.com/online-xsd-validator" target="_blank">XML data to validate</a></i>
+
+                <h3>XSLT (XML Stylesheet Language Transformations)</h3>
+                <p>XSLT is used to transform your XML document into HTML format, or other formats, such as CSS.</p>
+
+                <p><code>&lt;xsl:stylesheet&gt;</code>: Root element defining the XSLT version and namespace.</p>
+                <p><code>&lt;xsl:template&gt;</code>: Defines how XML content should be transformed - will matche your XML nodes and define the output.</p>
+                <p><code>&lt;xsl:for-each&gt;</code>: Iterate over a set of XML nodes and apply the template to each one.</p>
+
+                <h4>Example XSLT:</h4>
+
+                <!--CODE EXAMPLE--> 
+                <pre><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;!-- XML declaration --&gt;
+
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+    &lt;!--Template to match the root element --&gt;
+    &lt;xsl:template match="/person"&gt;
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;Person's Information&lt;/title&gt;
+
+                &lt;style&gt; &lt;!-- Add some in-line CSS for display styling --&gt;
+                    body { font-family: Arial, sans-serif; margin: 20px; }
+                    h1 { color: #333; }
+                    p { margin: 5px 0; }
+                &lt;/style&gt;
+
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Person's Information&lt;/h1&gt;
+                &lt;p&gt;&lt;strong&gt;Name: &lt;/strong&gt; &lt;xsl:value-of select="name"/&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;strong&gt;Age: &lt;/strong&gt; &lt;xsl:value-of select="age"/&gt;&lt;/p&gt;
+                &lt;h2&gt;Favorite Foods&lt;/h2&gt;
+                &lt;ul&gt;
+                    &lt;xsl:for-each select="favoriteFoods/food"&gt;
+                        &lt;li&gt;&lt;xsl:value-of select="."/&gt;&lt;/li&gt;
+                    &lt;/xsl:for-each&gt;
+                &lt;/ul&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+                </code></pre>
+
+                <!-- Create instructions -->
+                <h3>Creating Your First XSLT Stylesheet</h3>
+                <p>To create an XSLT Stylesheet, follow these steps:</p>
+
+                <ol>
+                    <li>Using the text editor you have open...</li>
+                    <li>Create a new file.</li>
+                    <li>Copy the above XSLT Example code and paste it into the file.</li>
+                    <li>Name it 'xsltFile', and save it with a <code>.xslt</code> extension. Example: <code>xsltFile.xslt</code>.</li>
+                </ol>  
+
+                <!--UNIT QUIZ BUTTON-->
+                <button class="unit3QuizBtn">Unit 3 Quiz</button>
+            </section>
+
+            <section id="quizzesSection" style="display:none;"> <!-- Quizzes summary -->
+                <h3>Unit Quizzes</h3>
+
+                <p>Confident in your abilities or wanting to just jump back in for some review? Click on a quiz button to quiz yourself!</p>
+
+                    <div id="quizButtons">
+                        <button class="unit1QuizBtn">Unit 1 Quiz</button>
+                        <button class="unit2QuizBtn">Unit 2 Quiz</button>
+                        <button class="unit3QuizBtn">Unit 3 Quiz</button>
+                    </div>
+            </section>
+
+            <section id="unitQuiz" style="display:none;"> <!-- General template for all the quizzes -->
+
+                <div id="unitQuizContent"></div> <!-- XML Quiz content will be loaded here -->
+
+                <button id="submitBtn">Submit Quiz</button>
+
+                <div id="quizResults"></div> <!-- The user's quiz score will be loaded here -->
+
+            </section>
+
+        </main>
+        <script src="scriptPart2.js"></script> <!-- use script2.js for the Javascript handling -->
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<unit>
+    <title>Unit 5: How to ask questions using 'Ba' and the 'Na' linker</title>
+
+    <content>
+        <!-- Introduction -->
+        <text>In this lesson, you will learn how to ask questions in Tagalog and use the linker na.</text>
+
+        <header>MARKER: BA</header>
+        <text>Used in yes/no questions:</text>
+        <list>
+            <item>Nag-aaral ba si Anna sa University of California?: Is Anna studying at the University of California?</item>
+        </list>
+
+        <text>In Tagalog, the word 'ba' is placed after the verb or subject to form a yes/no question. This structure helps to indicate that the sentence is a question rather than a statement. You can follow these patterns:</text>
+
+        <text>1. When the sentence starts with the verb:</text>
+        <list>
+            <item>[Verb] BA [Subject] [Object/Location]</item>
+        </list>
+        <text>Example: Nag-aaral ba si Anna sa University of California? (Is Anna studying at the University of California?)</text>
+
+        <text>2. When the sentence starts with the subject:</text>
+        <list>
+            <item>[Subject] BA [Verb] [Object/Location]</item>
+        </list>
+        <text>Example: Si Anna ba ay nag-aaral sa University of California? (Is Anna studying at the University of California?)</text>
+
+        <list>
+            <item>Nagtatrabaho ba siya sa ospital?: Is she working at the hospital?</item>
+            <item>Pupunta ba tayo sa park?: Are we going to the park?</item>
+        </list>
+
+        <header>LINKER: NA / -NG</header>
+        <text>'NA' and '-NG' are used to connect adjectives and nouns:</text>
+        <list>
+            <item>The linker 'NA' is used to connect adjectives to nouns when the adjective ends in a consonant.</item>
+            <item>The linker '-NG' is used when the adjective ends in a vowel.</item>
+        </list>
+
+        <text>Examples with adjectives and nouns:</text>
+        <list>
+            <item>Asul NA bag: Blue bag</item>
+            <item>Maliit NA bag: Small bag</item>
+            <item>Malaki(-NG) bag: Big bag</item>
+        </list>
+
+        <list>
+            <item>Asul na regalo: Blue gift</item>
+            <item>Malaking regalo: Big gift</item>
+            <item>Maliit na regalo: Small gift</item>
+        </list>
+
+        <list>
+            <item>Mahal na asul na bag: The blue bag is expensive</item>
+        </list>
+    </content>
+
+    <questions>
+        <!-- First Question -->
+        <question>
+            <text>How do you turn the sentence 'Nag-aaral si Anna sa University of California' into a question?</text>
+            <answers>
+                <answer correct="true">Nag-aaral ba si Anna sa University of California?</answer>
+                <answer correct="false">Si Anna ba ay nag-aaral sa University of California?</answer>
+                <answer correct="false">Nag-aaral si Anna sa University of California ba?</answer>
+            </answers>
+        </question>
+
+        <!-- Second Question -->
+        <question>
+            <text>What is the correct way to say 'Expensive bag' in Tagalog using the linker?</text>
+            <answers>
+                <answer correct="true">Mahal na bag</answer>
+                <answer correct="false">Mahal bag</answer>
+                <answer correct="false">Mahal na bag na</answer>
+            </answers>
+        </question>
+
+        <!-- Third Question -->
+        <question>
+            <text>How do you form a yes/no question using 'ba' in the sentence 'Bibili tayong regalo'?</text>
+            <answers>
+                <answer correct="true">Bibili ba tayong regalo?</answer>
+                <answer correct="false">Bibili tayo bang regalo?</answer>
+                <answer correct="false">Bibili tayong ba regalo?</answer>
+            </answers>
+        </question>
+    </questions>
+</unit>

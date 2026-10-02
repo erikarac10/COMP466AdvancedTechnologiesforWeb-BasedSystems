@@ -1,0 +1,176 @@
+/* 
+
+COMP 466 Web-Based Systems
+TMA 2
+
+Erika Racette ID:  
+
+This is the style sheet used for part1 and part2 of TMA2.
+Recycled from TMA1
+
+Background wallpaper retrieved with free use from: https://wallpaper.dog/sanrio-cinnamoroll 
+
+*/
+
+/*header style */
+header {
+    color: #edb2b3; /* text color */
+
+    text-shadow: -1px 1px 3px #daeef5,
+                 1px 1px 3px #daeef5,
+                 1px -1px 3px #daeef5,
+                 -1px -1px 3px #daeef5;
+    
+    padding: 1em 0; /* expand the background wallpaper */
+    text-align: center; /* center the text */
+
+    background-image: url('WallpaperDog-20677938.png'); /* path to wallpaper image */
+    background-size: cover;
+    background-position: center 30%; /* adjust vertical positioning */
+    
+}
+
+/* body style */
+body {
+    font-family: 'Century Gothic', sans-serif; /* the font that will be used */
+    /* font-family: 'Trebuchet MS', sans-serif; */
+    
+    margin: 0;
+    padding: 0;
+
+    background-color: #f9f3f9; /* light pink background color */
+}
+
+/* style for the nav bar (menu) */
+nav {
+    display: flex;
+    justify-content: center; /* center positioning for the items */
+    width: 100%; /* spans across the page */
+    padding: 10px 0; /* padding for its elements */
+
+    background-color: #edb2b3; /* background color of menu*/
+    box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.1); /* add a shadow under div */
+}
+
+/* style for nav bar items (menu items) */
+nav a {
+    padding: 1%; /* add some padding */
+    margin-left: 20px; /* add some space between menu items */
+    text-decoration: none; /* remove the underline of the links */
+    color: #ffffff; /* color of text */
+    position: relative;
+    /*transition: color 0.3s ease*/
+}
+
+/* on menu item hover */
+nav a::before {
+    content: ''; /* underline */
+    position: absolute;
+    width: 100%; /* width of menu item*/
+    height: 2px;
+    bottom: 0; /* put in the bottom of the menu item word */
+    left: 0;
+    background-color: #ffffff; /* line color */
+    /* visibility: hidden; /* hide by default*/
+    transform: scaleX(0); /* shrink/expand them*/
+    transition: all 0.3s ease-in-out; /* animation of the shrink/expand */
+}
+
+/* when menu item hovered or active */
+nav a:hover::before,
+nav a.active::before {
+    /*visibility: visible;*/
+    transform: scaleX(1);
+}
+
+/* content container for the part1/2/3/4 stuff */
+main {
+    padding: 1em; /* padding for the content */
+    margin: 1em auto; /* center in middle */
+    max-width: 80%; /* max width */
+
+    background-color: rgb(255, 255, 255); /*color of the background */
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1); /* shadow around main content */
+
+    min-height: 500px;
+    /* margin-bottom: 6em; /*so the footer doesn't cut off main content */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* the pink banner at the bottom of the web page*/
+footer {
+    text-align: center;
+    padding: 1em 0;
+    width: 100%; /* should take up 100% of page width */
+    position: relative; /* make sure it always appears in the bottom */
+    bottom: 0;
+
+    /* cosmetics */
+    background-color: #edb2b3;
+    color: white;
+    box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------------
+
+TMA 2 Part 1 Additions:
+
+------------------------------*/
+/* ---Default HTML Element Styles--- */
+
+/*all button styles*/
+button {
+    margin-top: 10px; /* Space above the button */
+    padding: 10px 20px; /* Add padding for better appearance */
+    background-color: #277987; /* Button background color */
+    color: #e5fcfc; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size for the button */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+button:hover {
+    background-color: #1f5f6f; /* Darker color on hover */
+}
+
+/*all form content*/
+form {
+    display: flex;
+    flex-direction: column; /* stack form elements vertically */
+}
+
+/*all input elements */
+input {
+    padding: 10px; /* Add padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: #e5fcfc;
+    min-width: 30%;
+}
+
+/* --- Classes and IDs --- */
+/*the login+register content class*/
+.auth {
+    padding: 3%;
+    width: 100%;
+}
+
+/*hold the login and register content*/
+#authentication-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color:white;
+}
+
+/*iframe definitions */
+iframe {
+    width: 100%;
+    min-height: 550px;
+    height: 80vh;
+}

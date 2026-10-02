@@ -1,0 +1,73 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;  //Disable the default layout for the html page
+    ViewData["Title"] = "♡ Visitor Tracker ♡";
+}
+
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>@ViewData["Title"]</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="../../shared/styles/styles2.css"> <!-- link to the location of the CSS style sheet -->
+        <link rel="icon" href="../../shared/styles/favicon.ico" type="image/x-icon"> <!-- link to tab icon -->
+    </head>
+
+    <body> <!-- web page content -->
+
+        <main> <!-- where each menu item content will be placed -->
+
+            <header> <!-- banner title -->
+                
+                <h1 id="header-title">@ViewData["Title"]</h1> <!-- will dynamically load tab titles-->
+
+            </header>
+            
+            <section id="section-0" class="box"> <!-- how many times a client computer has visited the page -->
+                <h2>Welcome!</h2>
+                <p>This web application demonstrates how to use cookies and browser-based tools to collect basic non-sensitive
+                        information about a visitor. It tracks how many times the visitor has accessed this page from the same device,
+                        shows the public IP address of the user, and detects their current time zone based on the device's locale settings.
+                        This is useful for customizing user experiences or gathering analytics without requiring user accounts or login.</p>
+
+                <b>Number of visits:</b> 
+                <p id="visit-count">@Model.VisitCount</p>
+
+                    <b>Your IP address:</b> 
+                    <p id="ip">@Model.IPAddress</p>
+
+                    <b>Your time zone:</b> 
+                    <p id="timezone">@Model.TimeZone</p>
+
+            </section>
+
+        </main> <!-- end menu item content -->
+
+        <!--scripts for the web app page -->
+        <script src="~/../shared/js/script-navbar.js"></script>
+        <script>
+
+            //Get the client's time zone from the browser
+            var timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+            if(timeZone) {
+                //Send the time zone to the server
+                //fetch("/?timeZone=" + timeZone)
+                fetch("?timeZone=" + encodeURIComponent(timeZone))
+                    .then(response => response.json())
+                    .then(data => {
+                        const timeZoneP = document.getElementById('timezone');
+                        //console.log(data);
+                        //timeZoneP.innerHTML = data.timeZone;
+                        showMessage(timeZoneP, data.timeZone);
+                    });
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,513 @@
+/* 
+
+COMP 466 Web-Based Systems
+TMA 3A
+
+Erika Racette ID:  
+
+This is the style sheet used for TMA 3 Web Apps (part 1, 2, 3 & 4)
+
+Background wallpaper retrieved with free use from: https://wallpaper.dog/sanrio-cinnamoroll 
+
+*/
+html {
+    height: 100%;
+    scrollbar-gutter: stable;
+}
+
+html, /* Contain scrolling within iframe */
+body {
+    overscroll-behavior-y: contain;
+}
+
+header {
+    text-align: center; /*Center the text */
+    padding: 1em 0; /*  Add header padding*/
+
+    background-color: #6abdcb;
+    color: #ffffff;
+
+    position: relative;
+    z-index: 1;
+    
+    /* TMA 3 additions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* body style */
+body {
+    font-family: 'Century Gothic', sans-serif; /* the font that will be used */
+    
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+
+    background-color: #e5fcfc;
+    width: 10%;
+    flex: 0 0 10%; /* Keep sidebar at a consistent width */
+    z-index: 2;
+    min-height: 530px;
+    overflow: visible;
+}
+
+nav a {
+    padding: 10%;
+    text-decoration: none; /* No link lines*/
+    margin-bottom: 1em; /* Add vertical space between nav items */
+    font-size: clamp(0.6rem, 1.3vw, 1.2rem); /* Responsive font size */
+    
+    transition: all 0.3s ease;
+    color: #277987;
+
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* On nav item hover... */
+nav a:hover,
+nav a.active {
+    transform: scale(1.1);
+    transform-origin: left center;
+    z-index: 3;
+
+    color: #e5fcfc;
+    background-color: #92ddea;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* All button styles*/
+button {
+    padding: 0.5em 1em;
+    color: #e5fcfc;
+    border: none; /* No border */
+    border-radius: 5px; /*Rounded edges*/
+    cursor: pointer; /*Let user know it's clickable */
+
+    font-size: clamp(0.9rem, 1.5vw, 1.6rem); /* Font size */
+    
+    background-color: #277987;
+    transition: background-color 0.3s ease; /*Animation for color change*/
+    margin: 1%;
+}
+
+button:hover {
+    background-color: #92ddea; /*Change background color when hovered*/
+}
+
+/* Drop down menu */
+select {
+    width: 98%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+/*Web apps that have a sidebar*/
+main {
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 2em;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        min-height: auto;
+        flex: 0 0 auto; /* Remove desktop 10% flex width */
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+
+    nav a {
+        padding: 1em;
+        margin-bottom: 0;
+    }
+
+    main {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .side-panel {
+        position: static;
+
+        width: 100%;
+        height: auto;
+        flex: 0 0 auto;
+
+        overflow: visible;
+
+        border-left: none;
+        border-top: 1px solid #ccc;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+/*
+ul li::before {
+    content: '?';
+    /* use heart symbol for bullets instead*
+    margin-right: 3%;
+}
+*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.radio {
+    width: 70px;
+    height: 20px;
+}
+
+/*all input elements */
+input {
+    padding: 10px; /* Add padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: #e5fcfc;
+    
+    margin: 1%;
+}
+
+/*iframe definitions */
+iframe {
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+}
+
+/* Aside content (part 3 & 4)*/
+.side-panel {
+    display: none;
+
+    flex: 0 0 20%;
+    width: 20%;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+
+    box-sizing: border-box;
+    padding: 2em 1.5em;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-color: #e7e7e7;
+    border-left: 1px solid #ccc;
+
+    font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+}
+
+.side-panel h3 {
+    margin: 0 0 2em 0;
+    text-align: center;
+}
+
+.config-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.config-list li {
+    margin-bottom: 1.5em;
+    overflow-wrap: break-word;
+}
+
+#add-to-cart-btn {
+    width: 100%;
+    margin: auto 0 0 0;
+}
+
+.store-map {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+}
+
+aside li {
+    list-style-type: none;
+}
+
+/* --------------------TMA 3 Additions-------------------- */
+/*------------------Box class------------------*/
+.box {
+    border: 1px solid #ccc;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+/* Radio button and label text */
+.box label {
+    width: 100%;
+    padding: 3%;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: bold; /* Label text bold */
+    display: flex;
+    justify-content: center;
+}
+
+.box input[type="radio"] {
+    width: 20px; /* size of btn */
+    margin-right: 3%; /* Space between the radio button and label */
+}
+
+/* For the list of comp parts */
+.box ul {
+    list-style-type: none; /*Remove bullet points*/
+}
+
+/* For each list item */
+.box li {
+    margin-bottom: 8px; /* Vertical spacing between parts */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.box h3 { 
+    color: #277987;
+}
+
+.box i {
+    text-align: right;
+}
+
+/* Warning box style for important info */
+.warning-box {
+    background: #ffebcc;
+    color: #cc5500;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------Button styles------------------*/
+.red-btn {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: #d9534f;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 1%;
+    width: 50%;
+}
+.red-btn:hover {
+	background-color: #c9302c;
+	transform: scale(1.05);
+}
+
+.green-btn {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: #4CAF50;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	width: 40%;
+    height: 60px;
+}
+.green-btn:hover {
+	background-color: #45a049;
+	transform: scale(1.05);
+}
+
+.orange-btn {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: #d9944f;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 1%;
+    width: 50%;
+}
+.orange-btn:hover {
+	background-color: #c97a2c;
+	transform: scale(1.05);
+}
+
+/****************************
+    Styles for Part 2
+*****************************/
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Side buttons class*/
+.side-button {
+    height: 10vh;
+    width: 5%;
+
+    font-size: larger;
+}
+
+/*The image container*/
+#slideshowCanvas {
+    margin: 1em; /* Add margin to the canvas */
+}
+
+/* The controls for the slideshow */
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    gap: 3%; /*Add some space between the buttons */
+}
+
+/*Caption for all the images */
+#caption {
+    display: flex;
+    justify-content: center;
+}
+
+/****************************
+    Styles for Part 3 & 4
+*****************************/
+
+/*------------------Header------------------*/
+#header-title { /*Space between logo and header*/
+    margin-left: 20px;
+}
+
+#cart-and-account {  /* Align cart and account to the very right */
+    position: absolute;
+    right: 0;
+    display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+#cart-div {
+	margin-right: 20px;
+	margin-top: 15px;
+}
+
+#cart-price {
+	margin-top: 5px;
+	font-size: clamp(0.6rem, 1.3vw, 1.2rem);
+}
+
+.icon { /*Icon class (account) */
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.icon:hover {
+	transform: scale(1.1); /* Enlarge icons slightly on hover */
+}
+
+/*------------------Sub Nav------------------*/
+/* Prebuilts link will not have bottom margin to connect to sub-nav */
+#nav-1 {
+    margin-bottom: 0;
+}
+
+/* Sub-navigation initial state */
+#sub-nav {
+    padding: 0;
+    transition: max-height 0.5s ease;
+    background-color: #f7f7f7;
+    border-left: 4px solid #92ddea;
+    display: none;
+    /* Initially not visible */
+}
+
+/* Show the sub-nav when hovering over nav-1 or when active */
+#nav-1:hover+#sub-nav,
+#nav-1.active+#sub-nav {
+    display: block;
+}
+
+/* Style for sub-nav links */
+#sub-nav a {
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: clamp(0.6rem, 1.1vw, 1.2rem);
+    margin: 10% 1% 10% 5%;
+    padding: 0.5rem;
+}
+
+/* Styles for sub-nav links on hover */
+#sub-nav a:hover,
+#sub-nav a.active {
+    background-color: #afafaf;
+    color: #ffffff;
+}
+
+#submit-button {
+    width: 100%;
+}
+
+/*Section 1 (prebuilds), sub-nav items, and Section 8 (Contact us) should be 60% width for the aside */
+.custom-width {
+    width: 95%;
+}
+
+/* Styling for the total price $ */
+#total-price-span{
+    font-size: 1.8em;
+    display: inline-block;
+}
+
+#order-total-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#feedback-button {
+    width: 100%;
+}
+
+/*------------------Bottom nav------------------*/
+/* Disable hover effects for bottom-nav links */
+.bottom-nav:hover,
+.bottom-nav.active {
+	color: #277987;
+    transition: none;
+	background-color: transparent; /* No background change on hover */
+	text-shadow: none; /* No text shadow on hover */
+}
+
+#authentication-div {
+    width: 300px;
+}

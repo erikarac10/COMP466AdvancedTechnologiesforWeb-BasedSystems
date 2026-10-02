@@ -1,0 +1,322 @@
+/* 
+
+COMP 466 Web-Based Systems
+TMA 2
+
+Erika Racette ID:  
+
+This is the style sheet used for part 1 and 2
+
+Background wallpaper retrieved with free use from: https://wallpaper.dog/sanrio-cinnamoroll 
+
+*/
+html {
+    height: 100%;
+    scrollbar-gutter: stable;
+}
+
+html, /* Contain scrolling within iframe */
+body {
+    overscroll-behavior-y: contain;
+}
+
+header {
+    text-align: center; /*Center the text */
+    padding: 1em 0; /*Add header padding*/
+
+    background-color: #6abdcb;
+    color: #ffffff;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* body style */
+body {
+    font-family: 'Century Gothic', sans-serif; /* the font that will be used */
+    
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+
+    background-color: #e5fcfc;
+    width: 10%;
+    flex: 0 0 10%; /* Keep sidebar at a consistent width */
+    z-index: 2;
+    min-height: 530px;
+    overflow: visible;
+}
+
+nav a {
+    padding: 10%;
+    text-decoration: none; /* No link lines*/
+    margin-bottom: 1em; /* Add vertical space between nav items */
+    font-size: clamp(0.6rem, 1.3vw, 1.2rem); /* Responsive font size */
+    
+    transition: all 0.3s ease;
+    color: #277987;
+
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* On nav item hover... */
+nav a:hover,
+nav a.active {
+    transform: scale(1.1);
+    transform-origin: left center;
+    z-index: 3;
+
+    color: #e5fcfc;
+    background-color: #92ddea;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*All button styles*/
+button {
+    padding: 0.5em 1em;
+    color: #e5fcfc;
+    border: none; /* No border */
+    border-radius: 5px; /*Rounded edges*/
+    cursor: pointer; /*Let user know it's clickable */
+
+    font-size: clamp(0.9rem, 1.5vw, 1.6rem); /* Font size */
+    
+    background-color: #277987;
+    transition: background-color 0.3s ease; /*Animation for color change*/
+    margin: 1%;
+}
+
+button:hover {
+    background-color: #92ddea; /*Change background color when hovered*/
+}
+
+select {
+    width: 98%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+/*Web apps that have a sidebar*/
+main {
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 2em;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        min-height: auto;
+        flex: 0 0 auto; /* Remove desktop 10% flex width */
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+
+    nav a {
+        padding: 1em;
+        margin-bottom: 0;
+    }
+
+    main {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+/*
+ul li::before {
+    content: '♡';
+    /* use heart symbol for bullets instead*
+    margin-right: 3%;
+}
+*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.radio {
+    width: 70px;
+    height: 20px;
+}
+
+/*all input elements */
+input {
+    padding: 10px; /* Add padding inside input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: #e5fcfc;
+    min-width: 30%;
+    margin: 1%;
+}
+
+/*iframe definitions */
+iframe {
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+}
+
+/*------------------------------
+
+TMA 2 Part 1 Additions:
+
+------------------------------*/
+
+#popular-bookmark-list {
+    list-style-type: none;
+    /* remove default bullets */
+    white-space: nowrap;
+}
+
+#user-bookmarks {
+    width: 80%;
+}
+
+/*each bookmark list item link*/
+.bookmark-list a,
+.bookmark-list li {
+    color: #e08d8f;
+    /* text-decoration: none; */
+    /* Remove underline */
+    font-weight: bold;
+    /* Bold text */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.bookmark-list a:hover {
+    color: #7a3d3e;
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+    /* Bold text */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+    cursor: pointer;
+}
+
+/*edit/delete move to the right a bit*/
+.bookmark-manage-container {
+    margin-left: 3%;
+}
+
+/*------------------------------
+
+TMA 2 Part 2 Additions:
+
+------------------------------*/
+
+/*------------------Sub Nav------------------*/
+/* not have bottom margin to connect to sub-nav */
+#link-1 {
+    margin-bottom: 0;
+}
+
+/* Sub-navigation initial state */
+#sub-nav {
+    padding: 0;
+    transition: max-height 0.5s ease;
+    background-color: #f7f7f7;
+    border-left: 4px solid #92ddea;
+    display: none;
+    /* Initially not visible */
+}
+
+#unit-links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Show the sub-nav when hovering over link-1 or when active */
+#link-1:hover+#sub-nav,
+#link-1.active+#sub-nav {
+    display: block;
+}
+
+/* Style for sub-nav links */
+#sub-nav a {
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: clamp(0.6rem, 1.1vw, 1.2rem);
+    margin: 10% 1% 10% 5%;
+    padding: 0.5rem;
+}
+
+/* Styles for sub-nav links on hover */
+#sub-nav a:hover,
+#sub-nav a.active {
+    background-color: #afafaf;
+    color: #ffffff;
+}
+
+#unit-content-div {
+    padding: 1em;
+}
+
+.media {
+    width: 100%;
+}
+
+#unit-quiz-div, #unit-quiz-content, .question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#unit-quiz-div { /* add space between unit content and unit quiz questions */
+    margin-top: 2em;
+}
+
+.question {
+    margin-top: 1em;
+}
+
+/*Unit quiz button*/
+.quiz-button {
+    display: block;
+    width: fit-content;
+    margin: 2em auto 1em auto; /*More space above and center button*/
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+.locked-unit {
+    pointer-events: none; /* Disable clicking the link */
+    background: gray; /* Change color */
+    color: white;
+}

@@ -1,0 +1,395 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;  //Disable the default layout for the html page
+    ViewData["Title"] = "♡ Online Computer Store - Cookies ♡";
+}
+
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>@ViewData["Title"]</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="../../shared/styles/styles2.css"> <!-- link to the location of the CSS style sheet -->
+        <link rel="icon" href="../../shared/styles/favicon.ico" type="image/x-icon"> <!-- link to tab icon -->
+    </head>
+
+    <body> <!-- web page content -->
+
+        <!--
+        COMP 466 Web-Based Systems
+        TMA 3
+
+        This is the index page for the online computer store app for TMA 3 part 4
+        -->
+
+        <nav id="nav-bar">
+            <!-- tabs will dynamically be loaded here -->
+            <a href="#" id="nav-0">Home</a> <!-- Home section link -->
+            <a href="#" id="nav-1">Prebuilts</a> <!-- Link to the prebuilt PCs selection page -->
+            <div id="sub-nav">
+               <a href="#" id="nav-2">Operating System</a> <!-- Link to select an operating system -->
+               <a href="#" id="nav-3">CPU</a> <!-- Link to select a CPU -->
+               <a href="#" id="nav-4">RAM</a> <!-- Link to select RAM options -->
+               <a href="#" id="nav-5">Hard Drive</a> <!-- Link to select hard drives -->
+               <a href="#" id="nav-6">Sound Card</a> <!-- Link to select sound cards -->
+               <a href="#" id="nav-7">Display</a> <!-- Link to select display options -->
+            </div>
+            <a href="#" id="nav-8" class="bottom-nav">Contact</a> <!-- Link to the contact / feedback section -->
+        </nav>
+
+        <main id="main-content"> <!-- where each menu item content will be placed -->
+
+            <header> <!-- banner title -->
+                <img src="../shared/styles/online-computer-store/logo-icon.png" alt="Built Different PCs Logo" id="logo" /> <!-- Logo image for the brand -->
+                <h1 id="header-title">Built Different PCs</h1> <!-- will dynamically load tab titles-->
+
+                <div id="cart-and-account">
+                    <!-- Section for account and cart functionalities -->
+                    <img src="../shared/styles/online-computer-store/person-icon.png" alt="User Icon" id="account-icon" class="icon" /> <!-- User account icon -->
+                    
+                    <div id="cart-div"> <!--cart icon and the price of their cart-->
+                    <img src="../shared/styles/online-computer-store/cart-icon.png" alt="Cart Icon" id="cart-icon" /> <!-- Cart icon -->
+                    <p id="cart-price">$0.00</p> <!-- Displays the total price in the cart -->
+                    </div>
+                </div>
+            </header>
+            
+            <section id="section-0"> <!-- Built Different PCs page -->
+                <h2>Welcome to Built Different PCs</h2>
+                <p>Whether you're looking to level up your gaming setup, improve your workflow, or find the perfect balance between the two, we offer a range of customizable PCs to meet your needs. </p>
+                <p>All Prebuilts come made in our signature 'Built Different PC' case.</p>
+                <p>Love the build but not a fan of one of the parts? All prebuilt PCs are fully customizable!</p>
+
+                <div id="order-process" class="box">
+                <h3 style="color: black;">The Ordering Process</h3>
+                <p>Our ordering system is designed to be straightforward, user-friendly, and payment-free at checkout:</p>
+                <ol>
+                    <li>1. Customize your desired prebuilt PC configuration from our available options.</li><br>
+                    <li>2. Upon finalizing your selection, proceed with the online checkout. No payment is required during the online checkout stage.</li><br>
+                    <li>3. After placing your order, you will need to visit our physical store within 7 days to complete your payment. Please bring your order ID with you to ensure we can locate your specific order.</li><br>
+                    <li>4. Once payment is made in-store, we will begin building your order!</li><br>
+                    <li>5. Create an account to place orders, track them, and view or manage your previous purchases.</li><br>
+                </ol>
+                </div>
+                <p class="warning-box">Please note that once payment is completed in-store, no modifications or cancellations can be made to your order.</p>
+            </section>
+
+            <section id="section-1" class="custom-width" style="display: none;"> <!-- Prebuilts page -->
+                <h3>Explore Our Pre-Built PCs</h3>
+                <p>Browse through our expertly curated selection of pre-built computers, tailored for a variety of uses - from gaming to professional tasks. Each pre-built can be fully customized by selecting the individual components (like OS, sound card, and more) using the navigation tabs on the left.</p>
+                    <!--Prebuilt list-->
+                    <div class="box">
+                        <label><input type="radio" value="1" name="Build">Mid Essentials</label>
+                        <ul>
+                            <li value="1"><b>Operating System:</b> Windows 11 Home <br><i>$199.99</i></li>
+                            <li value="5"><b>CPU:</b> Intel Core i9-13900K <br><i>$699.99</i></li>
+                            <li value="9"><b>RAM:</b> G.SKILL TridentZ RGB Series 32GB <br><i>$89.99</i></li>
+                            <li value="13"><b>Hard Drive:</b> Samsung 990 Pro 1TB NVMe PCI-e <br><i>$169.99</i></li>
+                            <li value="17"><b>Sound Card:</b> Creative Sound BlasterX AE-5 <br><i>$219.99</i></li>
+                            <li value="21"><b>Display:</b> Samsung Odyssey Neo G7 43" 4K Ultra HD <br><i>$849.99</i></li>
+                        </ul>
+                        <p>Created for serious gamers and streamers, this build delivers ultra-fast load times, high frame rates, and immersive 4K visuals with powerful audio support.</p>
+                        <h3>$2229.94</h3>
+                    </div>
+                    
+                    <div class="box">
+                        <label><input type="radio" value="2" name="Build">Epic Studio</label>
+                        <ul>
+                            <li value="2"><b>Operating System:</b> Windows 11 Pro <br><i>$299.99</i></li>
+                            <li value="6"><b>CPU:</b> AMD Ryzen 9 7950X 16-Core <br><i>$739.99</i></li>
+                            <li value="10"><b>RAM:</b> CORSAIR Vengeance LPX 32GB <br><i>$79.99</i></li>
+                            <li value="14"><b>Hard Drive:</b> Seagate Barracuda 2TB <br><i>$89.99</i></li>
+                            <li value="18"><b>Sound Card:</b> ASUS Xonar AE <br><i>$69.99</i></li>
+                            <li value="22"><b>Display:</b> LG UltraGear 27" QHD 240Hz <br><i>$799.99</i></li>
+                        </ul>
+                        <p>Built for creators and professionals, this high-performance system excels at video editing, rendering, coding, and a multitasking workflow.</p>
+                        <h3>$2079.94</h3>
+                      </div>
+                      
+                    <div class="box">
+                        <label><input type="radio" value="3" name="Build">iTower</label>
+                        <ul>
+                            <li value="3"><b>Operating System:</b> Ubuntu Linux <br><i>$0.00</i></li>
+                            <li value="7"><b>CPU:</b> Intel Core i7-12700K <br><i>$469.99</i></li>
+                            <li value="11"><b>RAM:</b> CORSAIR Vengeance LPX 64GB <br><i>$132.99</i></li>
+                            <li value="15"><b>Hard Drive:</b> 500GB SATA SSD <br><i>$89.99</i></li>
+                            <li value="19"><b>Sound Card:</b> Creative Sound Blaster AE-9 <br><i>$489.99</i></li>
+                            <li value="23"><b>Display:</b> Dell 27" WQHD 100Hz 4ms IPS LED Monitor <br><i>$239.99</i></li>
+                        </ul>
+                        <p>Ideal for advanced multitasking, music production, or Linux-based development, this setup balances performance with ample memory and professional-grade audio.</p>
+                        <h3>$1422.95</h3>
+                    </div>
+
+                    <div class="box">
+                        <label><input type="radio" value="4" name="Build">SmartHome PC</label>
+                        <ul>
+                            <li value="4"><b>Operating System:</b> Windows 10 Home <br><i>$115.99</i></li>
+                            <li value="8"><b>CPU:</b> AMD Ryzen 7 5800XT 8-Core <br><i>$249.99</i></li>
+                            <li value="12"><b>RAM:</b> CORSAIR Vengeance LPX 8GB <br><i>$59.99</i></li>
+                            <li value="16"><b>Hard Drive:</b> Seagate IronWolf 4TB <br><i>$144.99</i></li>
+                            <li value="20"><b>Sound Card:</b> Creative High-performance PCI-e <br><i>$157.99</i></li>
+                            <li value="24"><b>Display:</b> BenQ 27" FHD 60Hz 5ms GTG IPS LCD Monitor <br><i>$209.99</i></li>
+                        </ul>
+                        <p>Designed for home and school use, this build offers reliable performance for web browsing, homework, media playback, and digital storage.</p>
+                        <h3>$938.94</h3>
+                      </div>
+                    <!--Prebuilt list-->
+            </section>
+
+            <section id="section-2" class="custom-width" style="display: none;"> <!-- Operating Systems page -->
+                <h3>Operating System</h3>
+                <p>The Operating System (OS) is the software that allows your computer to run. It manages all the hardware and software on your PC, allowing you to interact with it.</p>
+                    <!--OS list-->
+                    <div class="box">
+                        <label><input type="radio" value="1" name="OS" data-price="199.99">Windows 11 Home</label>
+                        <p>A user-friendly OS designed for personal and professional use. The refreshed design allows you to do a variety of things effortlessly.</p>
+                        <h3>$199.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="2" name="OS" data-price="299.99">Windows 11 Pro</label>
+                        <p>Offers advanced features like enhanced security and management tools for professionals and businesses. Great for smarter collaboration.</p>
+                        <h3>$299.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="3" name="OS" data-price="0.00">Ubuntu Linux</label>
+                        <p>A free open-source OS known for its stability and security, favored by developers and system administrators. Powers the work of engineers across the globe.</p>
+                        <h3>$0.00</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="4" name="OS" data-price="115.99">Windows 10 Home</label>
+                        <p>A versatile and reliable OS for personal use with a variety of built-in applications. One of the best experience for starting fast and getting things done.</p>
+                        <h3>$115.99</h3>
+                    </div>
+                    <!--OS list-->
+            </section>
+            
+            <section id="section-3" class="custom-width" style="display: none;"> <!-- CPUs page -->
+                <h3>CPU (Central Processing Unit)</h3>
+                <p>The Central Processing Unit (CPU) processes instructions from programs, making decisions and performing calculations. A powerful CPU helps your computer run faster and handle more tasks at once.</p>
+                    <!--CPU list-->
+                    <div class="box">
+                        <label><input type="radio" value="5" name="CPU" data-price="699.99">Intel Core i9-13900K</label>
+                        <p>A high-performance CPU perfect for gaming and heavy workloads with advanced multitasking support. Has the power to provide you with advanced technologies.</p>
+                        <h3>$699.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="6" name="CPU" data-price="739.99">AMD Ryzen 9 7950X 16-Core</label>
+                        <p>Provides exceptional performance for gaming, content creation, and virtual machine workloads. Delivers game changing performance.</p>
+                        <h3>$739.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="7" name="CPU" data-price="469.99">Intel Core i7-12700K</label>
+                        <p>A high-performance processor for mid-level activities with impressive efficiency. Great for productivity, gaming, and content creation.</p>
+                        <h3>$469.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="8" name="CPU" data-price="249.99">AMD Ryzen 7 5800XT 8-Core</label>
+                        <p>Great for gamers and creators, with a solid performance in multi-threaded tasks and gaming. Allows you to enjoy multitasking, enhanced speed, and computing power.</p>
+                        <h3>$249.99</h3>
+                    </div>
+                    <!--CPU list-->
+            </section>
+            
+            <section id="section-4" class="custom-width" style="display: none;"> <!-- RAM page -->
+                <h3>RAM (Random Access Memory)</h3>
+                <p>Random Access Memory (RAM) is temporary memory that your computer uses to store data for programs that it's currently running. The more RAM your PC has, the more programs and tasks it can handle at once.</p>
+                    <!--RAM list-->
+                    <div class="box">
+                        <label><input type="radio" value="9" name="RAM" data-price="89.99">G.SKILL TridentZ RGB Series 32GB</label>
+                        <p>Ideal for gamers, offers fast response times and efficient multitasking performance while having a signature design.</p>
+                        <h3>$89.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="10" name="RAM" data-price="79.99">CORSAIR Vengeance LPX 32GB</label>
+                        <p>Designed for high-performance overclocking, great looks, performance, and compatibility.</p>
+                        <h3>$79.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="11" name="RAM" data-price="132.99">CORSAIR Vengeance LPX 64GB</label>
+                        <p>High-performance RAM for next level gaming, video editing, and professional-grade tasks.</p>
+                        <h3>$132.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="12" name="RAM" data-price="59.99">CORSAIR Vengeance LPX 8GB</label>
+                        <p>A budget-friendly option for light gaming, browsing, and basic tasks.</p>
+                        <h3>$59.99</h3>
+                    </div>
+                    <!--RAM list-->
+            </section>
+            
+            <section id="section-5" class="custom-width" style="display: none;"> <!-- Hard Drives page -->
+                <h3>Hard Drive</h3>
+                <p>The Hard Drive is where your computer stores all your data, such as documents, photos, and programs. The bigger the hard drive, the more thing you're able to store.</p>
+                    <!--Hard Drive list-->
+                    <div class="box">
+                        <label><input type="radio" value="13" name="HardDrive" data-price="169.99">Samsung 990 Pro 1TB NVMe PCI-e</label>
+                        <p>A high-speed storage solution that reduces load times and ensures system stability with faster file access.</p>
+                        <h3>$169.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="14" name="HardDrive" data-price="89.99">Seagate Barracuda 2TB</label>
+                        <p>Provides ample storage for larger files and data, though slower than SSDs.</p>
+                        <h3>$89.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="15" name="HardDrive" data-price="89.99">500GB SATA SSD</label>
+                        <p>Great for upgrading your computer with faster load times, better system responsiveness, and enhanced security.</p>
+                        <h3>$89.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="16" name="HardDrive" data-price="144.99">Seagate IronWolf 4TB</label>
+                        <p>An improved data reliability option for storing large amounts of data, especially for media storage.</p>
+                        <h3>$144.99</h3>
+                    </div>
+                    <!--Hard Drive list-->
+            </section>
+            
+            <section id="section-6" class="custom-width" style="display: none;"> <!-- Sound Cards page -->
+                <h3>Sound Card</h3>
+                <p>The Sound Card allows your computer to produce sound. It converts digital data into audio you can hear through speakers or headphones. If you're a gamer or audio professional, you might want to consider upgrading the sound card for better sound quality.</p>
+                   <!--Sound Card list-->
+                    <div class="box">
+                        <label><input type="radio" value="17" name="SoundCard" data-price="219.99">Creative Sound BlasterX AE-5</label>
+                        <p>High-end sound card with 32-bit/384kHz playback, customizable RGB lighting, and powerful amplification for headphones.</p>
+                        <h3>$219.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="18" name="SoundCard" data-price="69.99">ASUS Xonar AE</label>
+                        <p>Affordable PCIe sound card with 7.1 surround sound, perfect for gaming and media playback.</p>
+                        <h3>$69.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="19" name="SoundCard" data-price="489.99">Creative Sound Blaster AE-9</label>
+                        <p>All-new sound blaster delivers pure and pristine audio quality. Fantastic for professional music production and recording.</p>
+                        <h3>$489.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="20" name="SoundCard" data-price="157.99">Creative High-performance PCI-e</label>
+                        <p>Gaming-focused sound card with SBX Pro Studio technology, designed for immersive audio experiences.</p>
+                        <h3>$157.99</h3>
+                    </div>
+                    <!--Sound Card list-->
+            </section>
+            
+            <section id="section-7" class="custom-width" style="display: none;"> <!-- Displays page -->
+                <h3>Display</h3>
+                <p>The Display is the screen, the visual interface, where you see everything that your computer does. A higher resolution means sharper images, and a faster refresh rate makes everything appear smoother, especially in games or video editing.</p>
+                    <!--Display list-->
+                    <div class="box">
+                        <label><input type="radio" value="21" name="Display" data-price="849.99">Samsung Odyssey Neo G7 43" 4K Ultra HD</label>
+                        <p>This 43-inch monitor features Quantum Matrix Technology and VESA Display HDR600 that delivers extraordinary and realistic pictures with deep, vivid, and crisp details.</p>
+                        <h3>$849.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="22" name="Display" data-price="799.99">LG UltraGear 27" QHD 240Hz</label>
+                        <p>With a 16:9 aspect ratio and 240Hz refresh rate, this monitor delivers a sharp gaming experience.</p>
+                        <h3>$799.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="23" name="Display" data-price="239.99">Dell 27" WQHD 100Hz 4ms IPS LED Monitor</label>
+                        <p>A 27-inch gaming monitor with USB-C connectivity. LED monitor features IPS panel and 2560 x 1440 resolution.</p>
+                        <h3>$239.99</h3>
+                    </div>
+                    <div class="box">
+                        <label><input type="radio" value="24" name="Display" data-price="209.99">BenQ 27" FHD 60Hz 5ms GTG IPS LCD Monitor</label>
+                        <p>Enjoy an almost frameless viewing experience with reduced bezel size at 27". Great for gaming and multimedia consumption.</p>
+                        <h3>$209.99</h3>
+                    </div>
+                    <!--Display list-->
+            </section>            
+
+            <section id="section-8" class="custom-width" style="display: none;"> <!-- Contact & Feedback page -->
+                <h2>Contact Us</h2>
+                <p>For inquiries or support, please reach out to us at <a href="mailto:builtdifferentpcsstore@gmail.com">builtdifferentpcsstore@gmail.com</a> or use the form below.</p>
+
+                <h2>Your Feedback</h2>
+                <p>We appreciate your feedback! Please let us know your thoughts to help us improve our service.</p>
+                
+                <form id="feedback-form">
+                    <textarea id="feedback-text" name="feedbackText" rows="4" cols="50" placeholder="Enter your feedback here..." required></textarea>
+                    <br><br>
+                    <button id="feedback-button" type="submit" style='width:100%;'>Submit</button>
+                </form>
+            </section>
+
+            <section id="section-9" style="display: none;"> <!-- Cart page -->
+                <h2>Shopping Cart</h2>
+
+                <div id="cart-items-div"> 
+                </div>
+
+                <p class="warning-box">⚠️ Please note: Your order will not be built until you visit our store to pay. After placing your order, come to the store to finalize payment and confirm your build.</p>
+                    
+                <div id="order-total-div">
+                    <p id="order-message"></p>
+                    <h3>Order Total:<br><span id='total-price-span'></span></h3>
+                    
+                    <button id="place-order-btn" class="green-btn">Place Order</button>
+                </div>
+            </section>
+
+            <section id="section-10" class="custom-width" style="display: none;"> <!-- Order Success page -->
+                <div id="order-success-div" class="box">
+                    <h3 style="color:#4CAF50;">🎉 Order Successful! 🎉</h3>
+                    <h3 style="color:black;">Order Summary</h3>
+                    <p id="success-id" style="margin: 0px;"></p>
+                    <p id="success-date" style="margin: 0px;"></p>
+                    <p id="success-total" style="margin: 0px;"></p>
+                    <p><b>What Happens Next?</b></p>
+                    <p class="warning-box">📍 Please visit our store to finalize payment and confirm your build.</p>
+                </div>
+            </section>
+
+            <section id="section-11" style="display: none;"> <!-- Account page -->
+                <h2>Account</h2>
+                <p>This is your order history page. You can review all your past orders here. You can modify or cancel orders that have not yet been paid for in-store. </p>
+                <div id="user-account-orders-div">
+                    <!-- user account orders will be loaded in here -->
+                </div>
+            </section>
+        </main> <!-- end menu item content -->
+
+        <aside id="aside-custom-pc-config" class="side-panel"> <!-- User's current PC customization -->
+            <h3>Your Selected PC Configuration</h3>
+            
+            <ul class="config-list">
+                <li id="aside-build"></li>
+                <li id="aside-os"></li>
+                <li id="aside-cpu"></li>
+                <li id="aside-ram"></li>
+                <li id="aside-harddrive"></li>
+                <li id="aside-soundcard"></li>
+                <li id="aside-display"></li>
+            </ul>
+            
+            <button id="add-to-cart-btn">Add to Cart</button>
+        </aside>
+
+        <aside id="aside-store-address" class="side-panel">
+            <h3>Store Address</h3>
+        
+            <p>Seaside Boulevard</p>
+            <p>Barangay 76</p>
+            <p>Bay City</p>
+            <p>Pasay, Metro Manila</p>
+            <p>Philippines</p>
+        
+            <img
+                src="../shared/styles/online-computer-store/map-location.png"
+                alt="Map Location of Store"
+                class="store-map">
+        </aside>
+        
+        <!-- link the JavaScript file that will be used for the main page -->
+        <script src="../shared/js/script-navbar.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="../shared/js/script-shared-comp-store.js"></script>
+
+    </body>
+
+</html>

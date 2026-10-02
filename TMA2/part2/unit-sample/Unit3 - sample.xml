@@ -1,0 +1,73 @@
+<unit>
+    <title>Unit 3: Possessive Pronouns and Relationships</title>
+
+    <content>
+        <!-- Introduction -->
+        <text>In this lesson, we will focus on possessive pronouns and relationships.</text>
+
+        <header>POSSESSIVE PRONOUNS</header>
+        <text>Words that indicate possession:</text>
+        <list>
+            <item>Ko: My</item>
+            <item>Mo: Your</item>
+            <item>Niya: His/Her</item>
+            <item>Namin: Our (exclusive)</item>
+            <item>Natin: Our (inclusive)</item>
+            <item>Ninyo: Your (plural)</item>
+            <item>Nila: Their</item>
+        </list>
+
+        <header>RELATIONSHIP</header>
+        <text>These words are used to describe relationships:</text>
+        <list>
+            <item>Kapatid: Sibling</item>
+            <item>Kapitbahay: Neighbor</item>
+            <item>Kaibigan: Friend</item>
+            <item>Katrabaho: Co-worker</item>
+            <item>Kababayan: Fellow countryman</item>
+            <item>Kasambahay: Maid</item>
+            <item>Kamag-anak: Relative</item>
+        </list>
+
+        <header>COMMON PHRASES AND QUESTIONS</header> 
+        <text>Basic question words:</text> 
+        <list> 
+            <item>Sino?: Who?</item> 
+        </list>
+
+        <text>Example: Sino ang ________ mo? : [Who is your ________?]</text> 
+        <text>Response: (Relationship) ko si ________ : [(Relationship) is my ________.]</text>
+    </content>
+
+    <questions>
+        <!-- First Question -->
+        <question>
+            <text>What does the possessive pronoun "Mo" mean in English?</text>
+            <answers>
+                <answer correct="true">Your</answer>
+                <answer correct="false">My</answer>
+                <answer correct="false">His/Her</answer>
+            </answers>
+        </question>
+
+        <!-- Second Question -->
+        <question>
+            <text>What is the Tagalog translation of "Who is your sibling?"</text>
+            <answers>
+                <answer correct="true">Sino ang kapatid mo?</answer>
+                <answer correct="false">Sino ang kaibigan mo?</answer>
+                <answer correct="false">Sino ang katrabaho mo?</answer>
+            </answers>
+        </question>
+
+        <!-- Third Question -->
+        <question>
+            <text>What does "Natin" mean in relation to possession?</text>
+            <answers>
+                <answer correct="true">Our (inclusive)</answer>
+                <answer correct="false">My</answer>
+                <answer correct="false">Your (plural)</answer>
+            </answers>
+        </question>
+    </questions>
+</unit>

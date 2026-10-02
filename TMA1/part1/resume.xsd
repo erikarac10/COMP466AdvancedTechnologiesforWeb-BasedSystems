@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- xml declaration -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- Updated W3 schools reference XSL style sheet URI -->
+<!-- 
+
+COMP 466 Advanced Technologies for Web-Based Systems
+TMA 1
+
+Erika Racette
+
+This is the xsd file used for part 1
+
+-->
+    <!-- Define the root element 'resume' -->
+    <xs:element name="resume">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- General section -->
+                <xs:element name="general">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/> <!-- Name of the person -->
+                            <xs:element name="objective" type="xs:string"/> <!-- Career objective -->
+                            <xs:element name="phone" type="xs:string"/> <!-- Contact phone number -->
+                            <xs:element name="email" type="xs:string"/> <!-- Email address -->
+                            <xs:element name="address" type="xs:string"/> <!-- Physical address -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Education section -->
+                <xs:element name="education" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="degree" type="xs:string"/> <!-- Degree obtained -->
+                            <xs:element name="university" type="xs:string"/> <!-- University attended -->
+                            <xs:element name="graduationYear" type="xs:integer"/> <!-- Year of graduation -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Experience section -->
+                <xs:element name="experience">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="job" maxOccurs="unbounded"> <!-- Multiple jobs allowed -->
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="title" type="xs:string"/> <!-- Job title -->
+                                        <xs:element name="company" type="xs:string"/> <!-- Company name -->
+                                        <xs:element name="startDate" type="xs:date"/> <!-- Job start date -->
+                                        <xs:element name="endDate" type="xs:string" minOccurs="0"/> <!-- Job end date or ongoing job -->
+                                        <xs:element name="responsibilities">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="responsibility" type="xs:string" maxOccurs="unbounded"/> <!-- List of responsibilities -->
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

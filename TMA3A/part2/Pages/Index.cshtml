@@ -1,0 +1,71 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;  //Disable the default layout for the html page
+    ViewData["Title"] = "♡ Namibia + South Africa ♡";
+    var imagesJson = System.Text.Json.JsonSerializer.Serialize(Model.Images);
+}
+
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>@ViewData["Title"]</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="../../shared/styles/styles2.css"> <!-- link to the location of the CSS style sheet -->
+        <link rel="icon" href="../../shared/styles/favicon.ico" type="image/x-icon"> <!-- link to tab icon -->
+    </head>
+
+    <body> <!-- web page content -->
+        
+        <main>
+
+            <header> <!-- banner title -->
+            
+                <h1 id="header-title">@ViewData["Title"]</h1> <!-- will dynamically load tab titles-->
+
+            </header>
+
+            <div class="slideshow-container"> <!-- container to hold the image canvas and the buttons -->
+                <button id="prevButton" class="side-button">&lt;</button> <!-- prev button -->
+
+                <canvas id="slideshowCanvas" width="500" height="300"></canvas> <!-- image canvas, define width/height -->
+
+                <button id="nextButton" class="side-button">&gt;</button> <!-- next button -->
+            </div>
+
+            <i id="caption"></i> <!-- the caption for each of the images -->
+
+            <br> <!-- add some space between image canvas and the controls -->
+            
+            <div id="controls"> <!-- controls container button -->
+                <p>Transition:</p> <!-- Label for transition effects  -->
+                <select id="transitionEffectSelection"> <!-- Create a dropdown menu for the desired next image effects  -->
+                    <option value="fade">Fade</option> <!-- fade option  -->
+                    <option value="slide">Slide</option> <!-- slide option  -->
+                    <option value="zoom">Zoom</option> <!-- zoom option  -->
+                </select>
+
+                <p>Order:</p> <!-- Label for the Ordering  -->
+                <select id="sequentialOrderSelection"> <!-- dropdown menu for the ordering -->
+                    <option value="sequential">Sequential</option> <!-- in order  -->
+                    <option value="random">Random</option> <!-- random  -->
+                </select>
+
+                <button id="startStopButton" class="main-button" data-active="false">► Start</button> <!-- Start/Stop the slideshow  -->
+                <!-- initialize data-active as false -->
+            </div> <!-- end controls -->
+        </main>
+
+        <script src="~/js/site.js"></script>
+        <!-- manually reference site.js because Layout = null disables default js fetch  -->
+        <script>
+            const images = @Html.Raw(imagesJson);
+            //console.log("Images:", images);
+        </script>
+
+    </body>
+</html>

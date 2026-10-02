@@ -1,0 +1,122 @@
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>COMP466 - TMA2</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="../shared/styles/styles2.css"> <!-- link to the location of the CSS style sheet -->
+        <link rel="icon" href="../shared/styles/favicon.ico" type="image/x-icon"> <!-- link to tab icon -->
+    </head>
+
+    <body> <!-- web page content -->
+        <!-- 
+        COMP 466 Web-Based Systems
+        TMA 2
+
+        Erika Racette ID:  
+
+        This is the index page (user bookmark homepage) for TMA 2 part 1
+        -->
+
+        <nav id="nav-bar">
+            <a href="#" id="link-0">Home</a> <!-- User's bookmark home tab -->
+            <a href="#" id="link-1">Login</a> <!-- Authenticate user -->
+            <a href="#" id="link-2" style="display:none;">Logout</a> <!-- add logout link -->
+            <!-- <a href="../shared/php/logout.php" id="link-4">Logout</a> <!-- add logout link -->
+        </nav>
+
+        <main id="main-content"> <!-- where each menu item content will be placed -->
+            <header> <!-- banner title -->
+                <h1 id="header-title">♡ Bookmark Manager ♡</h1>
+            </header>
+
+            <section id="section-0">
+                <h2>Popular Bookmarks:</h2>
+
+                <ul id="popular-bookmark-list">
+                    <li>No bookmarks yet!</li>
+                    <!-- Top 10 bookmarks will be inserted here -->
+                    <!--<li>Popular Bookmark 1</li>
+                    <li>Popular Bookmark 2</li>-->
+                </ul>
+
+                <!-- how to use bookmarking service -->
+                <h2>Welcome to your personal bookmark list!</h2>
+                
+                <h3>1. Adding a Bookmark</h3>
+                <p>To add a new bookmark:</p>
+                <ol>
+                    <li>Enter the title of the bookmark in the "Bookmark Title" input field.</li>
+                    <li>Provide the URL for the bookmark in the "Bookmark URL" input field.</li>
+                    <li>Click the "Add Bookmark" button to save your bookmark to the list.</li>
+                </ol>
+
+                <h3>2. Editing a Bookmark</h3>
+                <p>To edit an existing bookmark:</p>
+                <ol>
+                    <li>Click the "Edit" button next to the bookmark you want to update.</li>
+                    <li>The title and URL fields will be pre-filled with the current bookmark's data.</li>
+                    <li>Modify the title or URL as needed.</li>
+                    <li>Click the "Save Changes" button to update the bookmark.</li>
+                </ol>
+
+                <h3>3. Deleting a Bookmark</h3>
+                <p>To delete a bookmark:</p>
+                <ol>
+                    <li>Click the "Delete" button next to the bookmark you want to remove.</li>
+                    <li>A confirmation prompt will appear. Click "OK" to delete the bookmark, or "Cancel" to keep it.</li>
+                </ol>
+
+                <h3>4. Notes on Bookmark URL</h3>
+                <i>Ensure that the URL entered is valid. A valid bookmark may look like this: 
+                    <ul>
+                        <li>'youtube.com'</li>
+                        <li>'www.Google.ca'</li>
+                        <li>'https://www.google.com/maps'</li>
+                    </ul>
+                </i>
+            </section>
+            
+            <!-- Authenticate user section login/register -->
+            <section id="section-1" style="display: none;">
+                <iframe id="frame-1" src="../shared/php/authentication.php" frameborder="0"></iframe> <!-- iframe for authentication -->
+                <!-- User bookmark homepage section  -->
+                <div id="user-bookmarks" style="display: none;">
+                    <h1>Welcome<span id="username"></span>!</h1>
+                    <p>You have a total of <span id="bookmark-count">0</span> bookmarks.</p>
+
+                    <h3>Your Bookmarks:</h3>
+                    <ul id="bookmark-list">
+                        <!-- Bookmark items will be dynamically inserted here -->
+                        <li>You have no bookmarks!</li>
+                    </ul>
+
+                    <h3 id="bookmark-header">New Bookmark</h3>
+
+                    <!-- add and edit bookmark form -->
+                    <form id="bookmark-form">
+                        <input type="hidden" id="bookmarkId" name="bookmark_id" value=""> <!-- The bookmark id (if editing/deleting) -->
+                        <input type="text" id="addBookmark-title" name="title" placeholder="Bookmark Title" required>
+                        <input type="url" id="addBookmark-URL" name="url" placeholder="Bookmark URL" required>
+                        <button id="add-btn" type="submit">Add Bookmark</button>
+                        <button id="edit-btn" type="submit" style="display: none;">Save Changes</button>
+                        <button id="cancel-btn" type="button" style="display: none;">Cancel Edit</button>
+                    </form>
+
+                    <!-- success or fail message for new bookmark -->
+                    <p id="message"></p>
+                </div>
+            </section>
+
+        </main> <!-- end menu item content -->
+        
+        <!-- link the JavaScript file that will be used for the main page -->
+        <script src="../shared/js/script-navbar.js"></script>
+        <script src="js/script-index.js"></script> <!-- use script for index page -->
+
+    </body>
+
+</html>

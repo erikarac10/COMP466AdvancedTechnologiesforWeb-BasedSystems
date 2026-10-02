@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <title>Unit 2: JavaScript</title>
+    <question>
+        <text>What is the correct syntax to change the content of the HTML paragraph element with the ID = "message"?</text>
+        <answer correct="true">document.getElementById("message").innerHTML = "Hello!";</answer>
+        <answer correct="false">document.getElement("p").innerHTML = "Hello!";</answer>
+        <answer correct="false">#message.innerHTML = "Hello!";</answer>
+    </question>
+    <question>
+        <text>How do you define a variable in Javascript</text>
+        <answer correct="false">int myVariable;</answer>
+        <answer correct="false">myVariable var;</answer>
+        <answer correct="true">var myVariable;</answer>
+    </question>
+    <question>
+        <text>How do you define a new AJAX request?</text>
+        <answer correct="true">new XMLHttpRequest();</answer>
+        <answer correct="false">new AJAX();</answer>
+        <answer correct="false">new AJAXHttpRequest();</answer>
+    </question>
+</quiz>

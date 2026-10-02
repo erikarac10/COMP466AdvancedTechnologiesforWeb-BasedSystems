@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Utility Tools App</title> <!-- title-->
+        <link rel="stylesheet" href="../shared/styles2.css"> <!-- Use same shared .css file  -->
+    </head>
+    <body>
+        <!-- 
+
+        COMP 466 Advanced Technologies for Web-Based Systems
+        TMA 1
+
+        Erika Racette
+        June 15, 2024 - August 8, 2024
+        Estimated hours: 60
+
+        This is the html file of a Web App that fulfills the requirements of part 4 of TMA 1.
+
+        -->
+        <nav> <!-- navbar -->
+            <a href="#" id="homeLink">Home</a> <!-- main about page with landing/starting info-->
+            <a href="#" id="measurementConverterLink">Measurement Converter</a> <!-- measurement converter -->
+            <a href="#" id="mortgageCalculatorLink">Mortgage Calculator</a> <!-- mortaga calculator -->
+            <a href="#" id="additionalToolLink">Canadian Time-Zone Converter</a> <!-- utility tool-->
+        </nav>
+        <main class="mainWithSidebar"> <!-- this web app has a sidebar -->
+            <header>
+                <h1>♡ Utility Tools ♡</h1>
+            </header>
+            <div id="content"></div> <!-- utility tools will be dynamically loaded via ajax in this container-->
+        </main>
+        <script src="scriptPart4.js"></script>
+    </body>
+</html>

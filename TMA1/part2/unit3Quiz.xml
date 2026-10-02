@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <title>Unit 3: XML</title>
+    <question>
+        <text>What does XML stand for?</text>
+        <answer correct="true">eXtensible Markup Language</answer>
+        <answer correct="false">eXtended Markup Language</answer>
+        <answer correct="false">Extended Markup Language</answer>
+    </question>
+    <question>
+        <text>What is the file extension of a XML Schema?</text>
+        <answer correct="false">.xml</answer>
+        <answer correct="false">.xslt</answer>
+        <answer correct="true">.xsd</answer>
+    </question>
+    <question>
+        <text>What is a complexType?</text>
+        <answer correct="false">Defines the order and occurrences of child elements within the complex type.</answer>
+        <answer correct="false">Defines a XML element's name and type.</answer>
+        <answer correct="true">Describes an element with nested child elements.</answer>
+    </question>
+</quiz>

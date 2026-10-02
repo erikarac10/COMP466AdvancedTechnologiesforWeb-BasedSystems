@@ -1,0 +1,97 @@
+<unit>
+    <title>Unit 4: 'Sa' and Personal Pronouns</title>
+    
+    <content>
+        <!-- Introduction -->
+        <text>In this lesson, you will learn about the word 'Sa' and how to use it with personal pronouns.</text>
+
+        <header>MARKER: SA</header>
+        <text>SA is a preposition that can mean to, at, in, for, or on, depending on the context.</text>
+
+        <text>1. SA marks the location.</text>
+        <list>
+            <item>Nag-aaral ako sa University of California.: [I am studying AT University of California.] </item>
+            <item>Nagtatrabaho ako SA ospital.: [I work AT the hospital.] </item>
+        </list>
+
+        <text>2. SA marks direction.</text>
+        <list>
+            <item>Pupunta ako sa California bukas: [I will go TO California tomorrow.] </item>
+            <item>Pupunta ako sa market.: [I am going TO the market.] </item>
+        </list>
+
+        <text>3. SA marks the beneficiary of an action or object. It is equivalent to the English "for" phrase in the context of doing something for someone/something.</text>
+        <list>
+            <item>Bibili ako ng pagkain para sa nanay ko: [I will buy food FOR my mom.] </item>
+            <item>Magluluto ako para sa asawa ko.: [I will cook FOR my spouse.] </item>
+        </list>
+
+        <text>4. SA marks a future tense expressed as a specific day/date/season.</text>
+        <list>
+            <item>Magtatrabaho ako sa Lunes.: [I will work on Monday.] </item>
+            <item>Magcecelebrate kami ng birthday ni Ella sa Abril 8.: [We will celebrate Ella's birthday on April 8.] </item>
+        </list>
+
+        <header>SA + PERSONAL PRONOUNS</header>
+        <text>You can replace the very first vowel of a possessive pronoun with 'sa':</text>
+        <list>
+            <item>(sa) akin: mine</item>
+            <item>(sa) iyo: yours</item>
+            <item>(sa) kanya: hers/his</item>
+            <item>(sa) amin: ours (excluding you)</item>
+            <item>(sa) atin: ours (including you)</item>
+            <item>(sa) inyo: you (plural)</item>
+            <item>(sa) kanila: theirs</item>
+        </list>
+
+        <text>Example with "Regalo" (Gift):</text>
+        <list>
+            <item>Regalo para sa akin. (for me)</item>
+            <item>Regalo para sa iyo. (for you)</item>
+            <item>Regalo para sa kanya. (for his/her)</item>
+            <item>Regalo para sa amin. (for us - exclusive)</item>
+            <item>Regalo para sa atin. (for us - inclusive)</item>
+            <item>Regalo para sa inyo. (for you - plural)</item>
+            <item>Regalo para sa kanila. (for them)</item>
+        </list>
+
+        <header>MARKER: KAY / KINA</header>
+        <text>"KAY" and "KINA" are used to express for whom an action is done, specifically for names:</text>
+        <list>
+            <item>Bibili ako ng pagkain para kay Lisa.: [I will buy food for Lisa.] </item>
+            <item>Magluluto ako para kina Lisa at Aaron.: [I will cook for Lisa and Aaron.] </item>
+        </list>
+    </content>
+
+    <questions>
+       <!-- First Question -->
+        <question>
+            <text>What does "Pupunta ako sa market" mean?</text>
+            <answers>
+                <answer correct="true">I am going to the market</answer>
+                <answer correct="false">I will buy a gift</answer>
+                <answer correct="false">I will work on Monday</answer>
+            </answers>
+        </question>
+
+        <!-- Second Question -->
+        <question>
+            <text>What is the correct translation for "Gift for me" in Tagalog?</text>
+            <answers>
+                <answer correct="true">Regalo para sa akin</answer>
+                <answer correct="false">Regalo para kay Lisa</answer>
+                <answer correct="false">Regalo para sa kanya</answer>
+            </answers>
+        </question>
+
+        <!-- Third Question -->
+        <question>
+            <text>What does "Bibili ako ng regalo para sa kanya" mean?</text>
+            <answers>
+                <answer correct="true">I will buy a gift for him/her</answer>
+                <answer correct="false">I will work on Monday</answer>
+                <answer correct="false">I will buy food for Lisa</answer>
+            </answers>
+        </question>
+    </questions>
+</unit>

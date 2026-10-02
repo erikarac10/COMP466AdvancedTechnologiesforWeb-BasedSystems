@@ -1,0 +1,107 @@
+<unit>
+    <title>Unit 1: Basic Vocabulary and Phrases</title>
+
+    <content>
+        <!-- Introduction -->
+        <text>In this lesson, you will learn the basic vocabulary, phrases, and sentence structures commonly used in everyday conversations in Tagalog.</text>
+
+        <header>FEELINGS</header>
+        <text>Common adjectives used to express feelings:</text>
+        <list>
+            <item>Masaya: Happy</item>
+            <item>Pagod: Tired</item>
+            <item>Gutom: Hungry</item>
+            <item>Inaantok: Sleepy</item>
+            <item>Mabuti: Good, fine</item>
+            <item>Okay lang: It's okay</item>
+        </list>
+
+        <header>INTRODUCTIONS</header>
+        <text>Learn to introduce yourself and ask basic questions:</text>
+        <list>
+            <item>Pangalan: Name</item>
+            <item>Saan: Where</item>
+            <item>Trabaho: Job</item>
+        </list>
+
+        <header>COMMON PHRASES AND QUESTIONS</header>
+        <text>Common introduction phrases:</text>
+        <list>
+            <item>Kumusta ka?: How are you? (Informal)</item>
+            <item>Ano ang pangalan mo?: What is your name?</item>
+            <item>Saan ka nag-aaral?: Where do you study?</item>
+            <item>Taga saan ka?: Where are you from?</item>
+        </list>
+        <text>Responses:</text>
+        <list>
+            <item>Ako si ________: [I am ________].</item>
+            <item>Taga ________ ako: [I'm from Place].</item>
+            <item>Nag-aaral ako sa ________: [I study at ________].</item>
+        </list>
+
+        <header>EXPRESSIONS</header>
+        <text>These phrases will help you when you need to ask for clarification or express basic ideas:</text>
+        <list>
+            <item>May tanong po ako. - I have a question.</item>
+            <item>Paki-ulit po. - Please repeat.</item>
+            <item>Ano ang major mo? - What's your major? (Used in school contexts)</item>
+            <item>Ano ang trabaho mo? - What is your job?</item>
+        </list>
+        <text>Responses:</text>
+        <list>
+            <item>________ ang major ko: [___is my major]</item>
+            <item>Nagtatrabaho ako sa ________: [I work in ________]</item>
+            <item>________ po ako: [I am a ________ (Job)]</item>
+        </list>
+
+        <header>PARTS OF THE DAY</header>
+        <text>Learn how to greet someone based on the time of day:</text>
+        <text>(Maganda/Magandang: Good/beautiful)</text>
+        <list>
+            <item>Umaga: Morning (Magandang umaga po! - Good morning!)</item>
+            <item>Tanghali: Noon (Magandang tanghali po! - Good midday/noon!)</item>
+            <item>Hapon: Afternoon (Magandang hapon po! - Good afternoon!)</item>
+            <item>Gabi: Evening (Magandang gabi po! - Good evening!)</item>
+        </list>
+
+        <header>SENTENCE PATTERNS</header>
+        <text>Sentence structure in Tagalog generally follows a pattern of:</text>
+        <text>[Verb] [Actor] [Object] [Location]</text>
+        <text>Example:</text>
+        <text>ENGLISH: Anna fried the chicken in the kitchen.</text>
+        <text>TAGALOG: Prinito ni Anna ang manok sa kusina.</text>
+        <text>Explanation: In Tagalog, the verb (action) comes first, followed by the actor (who performed the action), the object (what was acted upon), and the location.</text>
+    </content>
+
+    <questions>
+        <!-- First Question -->
+        <question>
+            <text>What is the Tagalog translation of "Good morning"?</text>
+            <answers>
+                <answer correct="false">Magandang hapon po</answer>
+                <answer correct="true">Magandang umaga po</answer>
+                <answer correct="false">Magandang gabi po</answer>
+            </answers>
+        </question>
+
+        <!-- Second Question -->
+        <question>
+            <text>What does "Nagtatrabaho ako sa ________" mean?</text>
+            <answers>
+                <answer correct="true">I work in ________</answer>
+                <answer correct="false">I study at ________</answer>
+                <answer correct="false">I'm from ________</answer>
+            </answers>
+        </question>
+
+        <!-- Third Question -->
+        <question>
+            <text>How do you say "Where are you from?" in Tagalog?</text>
+            <answers>
+                <answer correct="true">Taga saan ka?</answer>
+                <answer correct="false">Saan ka nag-aaral?</answer>
+                <answer correct="false">Ano ang pangalan mo?</answer>
+            </answers>
+        </question>
+    </questions>
+</unit>

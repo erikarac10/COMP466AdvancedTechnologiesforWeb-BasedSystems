@@ -1,0 +1,258 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;  //Disable the default layout for the html page
+    ViewData["Title"] = "♡ Online Computer Store - Database ♡";
+}
+
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>@ViewData["Title"]</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="../../shared/styles/styles2.css"> <!-- link to the location of the CSS style sheet -->
+        <link rel="icon" href="../../shared/styles/favicon.ico" type="image/x-icon"> <!-- link to tab icon -->
+    </head>
+
+    <body> <!-- web page content -->
+
+        <!--
+        COMP 466 Web-Based Systems
+        TMA 3
+
+        This is the index page for the online computer store app for TMA 3 part 4
+        -->
+
+        <nav id="nav-bar">
+            <!-- tabs will dynamically be loaded here -->
+            <a href="#" id="nav-0">Home</a> <!-- Home section link -->
+            <a href="#" id="nav-1">Prebuilts</a> <!-- Link to the prebuilt PCs selection page -->
+            <div id="sub-nav">
+               <a href="#" id="nav-2">Operating System</a> <!-- Link to select an operating system -->
+               <a href="#" id="nav-3">CPU</a> <!-- Link to select a CPU -->
+               <a href="#" id="nav-4">RAM</a> <!-- Link to select RAM options -->
+               <a href="#" id="nav-5">Hard Drive</a> <!-- Link to select hard drives -->
+               <a href="#" id="nav-6">Sound Card</a> <!-- Link to select sound cards -->
+               <a href="#" id="nav-7">Display</a> <!-- Link to select display options -->
+            </div>
+            <a href="#" id="nav-8" class="bottom-nav">Contact</a> <!-- Link to the contact / feedback section -->
+        </nav>
+
+        <main id="main-content"> <!-- where each menu item content will be placed -->
+            <header> <!-- banner title -->
+                <img src="../shared/styles/online-computer-store/logo-icon.png" alt="Built Different PCs Logo" id="logo" /> <!-- Logo image for the brand -->
+                <h1 id="header-title">Built Different PCs</h1> <!-- will dynamically load tab titles-->
+
+                <div id="cart-and-account">
+                    <!-- Section for account and cart functionalities -->
+                    <img src="../shared/styles/online-computer-store/person-icon.png" alt="User Icon" id="account-icon" class="icon" /> <!-- User account icon -->
+                    
+                    <div id="cart-div"> <!--cart icon and the price of their cart-->
+                    <img src="../shared/styles/online-computer-store/cart-icon.png" alt="Cart Icon" id="cart-icon" /> <!-- Cart icon -->
+                    <p id="cart-price">$0.00</p> <!-- Displays the total price in the cart -->
+                    </div>
+                </div>
+            </header>
+
+            <section id="section-0"> <!-- Built Different PCs page -->
+                <h2>Welcome to Built Different PCs</h2>
+                <p>Whether you're looking to level up your gaming setup, improve your workflow, or find the perfect balance between the two, we offer a range of customizable PCs to meet your needs. </p>
+                <p>All Prebuilts come made in our signature 'Built Different PC' case.</p>
+                <p>Love the build but not a fan of one of the parts? All prebuilt PCs are fully customizable!</p>
+
+                <div id="order-process" class="box">
+                <h3 style="color: black;">The Ordering Process</h3>
+                <p>Our ordering system is designed to be straightforward, user-friendly, and payment-free at checkout:</p>
+                <ol>
+                    <li>1. Customize your desired prebuilt PC configuration from our available options.</li><br>
+                    <li>2. Upon finalizing your selection, proceed with the online checkout. No payment is required during the online checkout stage.</li><br>
+                    <li>3. After placing your order, you will need to visit our physical store within 7 days to complete your payment. Please bring your order ID with you to ensure we can locate your specific order.</li><br>
+                    <li>4. Once payment is made in-store, we will begin building your order!</li><br>
+                    <li>5. Create an account to place orders, track them, and view or manage your previous purchases.</li><br>
+                </ol>
+                </div>
+                <p class="warning-box">Please note that once payment is completed in-store, no modifications or cancellations can be made to your order.</p>
+            </section>
+
+            <section id="section-1" class="custom-width" style="display: none;"> <!-- Prebuilts page -->
+                <h3>Explore Our Pre-Built PCs</h3>
+                <p>Browse through our expertly curated selection of pre-built computers, tailored for a variety of uses - from gaming to professional tasks. Each pre-built can be fully customized by selecting the individual components (like OS, sound card, and more) using the navigation tabs on the left.</p>
+            </section>
+
+            <section id="section-2" class="custom-width" style="display: none;"> <!-- Operating Systems page -->
+                <h3>Operating System</h3>
+                <p>The Operating System (OS) is the software that allows your computer to run. It manages all the hardware and software on your PC, allowing you to interact with it.</p>
+            </section>
+            
+            <section id="section-3" class="custom-width" style="display: none;"> <!-- CPUs page -->
+                <h3>CPU (Central Processing Unit)</h3>
+                <p>The Central Processing Unit (CPU) processes instructions from programs, making decisions and performing calculations. A powerful CPU helps your computer run faster and handle more tasks at once.</p>
+            </section>
+            
+            <section id="section-4" class="custom-width" style="display: none;"> <!-- RAM page -->
+                <h3>RAM (Random Access Memory)</h3>
+                <p>Random Access Memory (RAM) is temporary memory that your computer uses to store data for programs that it's currently running. The more RAM your PC has, the more programs and tasks it can handle at once.</p>
+            </section>
+            
+            <section id="section-5" class="custom-width" style="display: none;"> <!-- Hard Drives page -->
+                <h3>Hard Drive</h3>
+                <p>The Hard Drive is where your computer stores all your data, such as documents, photos, and programs. The bigger the hard drive, the more thing you're able to store.</p>
+            </section>
+            
+            <section id="section-6" class="custom-width" style="display: none;"> <!-- Sound Cards page -->
+                <h3>Sound Card</h3>
+                <p>The Sound Card allows your computer to produce sound. It converts digital data into audio you can hear through speakers or headphones. If you're a gamer or audio professional, you might want to consider upgrading the sound card for better sound quality.</p>
+            </section>
+            
+            <section id="section-7" class="custom-width" style="display: none;"> <!-- Displays page -->
+                <h3>Display</h3>
+                <p>The Display is the screen, the visual interface, where you see everything that your computer does. A higher resolution means sharper images, and a faster refresh rate makes everything appear smoother, especially in games or video editing.</p>
+            </section>            
+
+            <section id="section-8" class="custom-width" style="display: none;"> <!-- Contact & Feedback page -->
+                <h2>Contact Us</h2>
+                <p>For inquiries or support, please reach out to us at <a href="mailto:builtdifferentpcsstore@gmail.com">builtdifferentpcsstore@gmail.com</a> or use the form below.</p>
+
+                <h2>Your Feedback</h2>
+                <p>We appreciate your feedback! Please let us know your thoughts to help us improve our service.</p>
+                
+                <form id="feedback-form">
+                    <textarea id="feedback-text" name="feedbackText" rows="4" cols="50" placeholder="Enter your feedback here..." required></textarea>
+                    <br><br>
+                    <button id="feedback-button" type="submit" style='width:100%;'>Submit</button>
+                </form>
+            </section>
+
+            <section id="section-9" style="display: none;"> <!-- Cart page -->
+                <h2>Shopping Cart</h2>
+
+                <div id="cart-items-div"> 
+                </div>
+
+                <p class="warning-box">⚠️ Please note: Your order will not be built until you visit our store to pay. After placing your order, come to the store to finalize payment and confirm your build.</p>
+                    
+                <div id="order-total-div">
+                    <p id="order-message"></p>
+                    <h3>Order Total:<br><span id='total-price-span'></span></h3>
+                    
+                    <button id="place-order-btn" class="green-btn">Place Order</button>
+                </div>
+            </section>
+
+            <section id="section-10" class="custom-width" style="display: none;"> <!-- Order Success page -->
+                <div id="order-success-div" class="box">
+                    <h3 style="color:#4CAF50;">🎉 Order Successful! 🎉</h3>
+                    <h3 style="color:black;">Order Summary</h3>
+                    <p id="success-id" style="margin: 0px;"></p>
+                    <p id="success-date" style="margin: 0px;"></p>
+                    <p id="success-total" style="margin: 0px;"></p>
+                    <p><b>What Happens Next?</b></p>
+                    <p class="warning-box">📍 Please visit our store to finalize payment and confirm your build.</p>
+                </div>
+            </section>
+
+            <section id="section-11" style="display: none;"> <!-- Account page -->
+                <h2>Account</h2>
+                <p>This is your order history page. You can review all your past orders here. You can modify or cancel orders that have not yet been paid for in-store. </p>
+                
+                <!-- div for authentication-->
+                <div id="authentication-div">
+                    <div id="login-register-div">
+                        <div id="login" class="auth">
+                            <h2>Login</h2>
+                            <p>Existing Email:</p>
+
+                            <!-- form for login -->
+                            <form id="login-form" method="POST">
+                                <input type="text" name="email" placeholder="Email" required>
+                                    <p>Password:</p>
+                                    <input type="password" name="password" placeholder="Password" required>
+                                    <br><br><button id="login-button" type="submit">Login</button>
+                            </form>
+
+                            <p id="login-message"></p>
+                        </div>
+
+                        <div id="register" class="auth">
+                            <h2>Register</h2>
+                            <p>Create Email:</p>
+
+                            <!-- form for register -->
+                            <form id="register-form" method="POST">
+                                <input type="text" name="email" placeholder="Email" required>
+                                <p>Password:</p>
+                                <input type="password" name="password" placeholder="Password" required>
+                                <br><br><button id="register-button" type="submit">Register</button>
+                                <p id="register-message"></p>
+                            </form>
+                        </div>
+
+                        
+                    </div>
+
+                    <div id="recovery" class="auth">
+                        <h3>Forgot Password?</h3>
+                        <p>Enter Email:</p>
+
+						<!-- form for recovery -->
+                        <form id="recovery-form" method="POST">
+                            <input type="text" name="email" placeholder="Email" required>
+                            <br><br>
+                            <button id="recovery-button" type="submit">Send Recovery Email</button>
+                            <p id="recovery-message"></p>
+                        </form>
+                    </div>
+
+                    </div> <!-- authentication-div -->
+
+                    <div id="user-account-orders-div" style="display:none;">
+                        <!-- user account orders will be loaded in here -->
+                    </div>
+            </section>
+
+        </main> <!-- end menu item content -->
+
+<aside id="aside-custom-pc-config" class="side-panel"> <!-- User's current PC customization -->
+            <h3>Your Selected PC Configuration</h3>
+            
+            <ul class="config-list">
+                <li id="aside-build"></li>
+                <li id="aside-os"></li>
+                <li id="aside-cpu"></li>
+                <li id="aside-ram"></li>
+                <li id="aside-harddrive"></li>
+                <li id="aside-soundcard"></li>
+                <li id="aside-display"></li>
+            </ul>
+            
+            <button id="add-to-cart-btn">Add to Cart</button>
+        </aside>
+
+        <aside id="aside-store-address" class="side-panel">
+            <h3>Store Address</h3>
+        
+            <p>Seaside Boulevard</p>
+            <p>Barangay 76</p>
+            <p>Bay City</p>
+            <p>Pasay, Metro Manila</p>
+            <p>Philippines</p>
+        
+            <img
+                src="../shared/styles/online-computer-store/map-location.png"
+                alt="Map Location of Store"
+                class="store-map">
+        </aside>
+        
+        <!-- link the JavaScript file that will be used for the main page -->
+        <script src="../shared/js/script-navbar.js"></script>
+        <script src="~/js/site.js"></script>
+        <script src="~/js/authentication.js"></script>
+        <script src="../shared/js/script-shared-comp-store.js"></script>
+
+    </body>
+
+</html>

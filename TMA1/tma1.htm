@@ -1,0 +1,312 @@
+<!DOCTYPE html> <!--  document type declaration -->
+<html lang="en"> <!--  html lang is english -->
+
+    <head> <!--  head of webpage -->
+        <meta charset="UTF-8"> <!--  use utf-8 encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  scale web page on different devices -->
+        
+        <title>COMP466 - TMA1</title> <!-- title of the page -->
+
+        <link rel="stylesheet" href="shared/styles.css"> <!-- link to the location of the CSS style sheet -->
+
+    </head>
+
+    <body> <!-- web page content -->
+        <!-- 
+        COMP 466 Advanced Technologies for Web-Based Systems
+        TMA 1
+
+        Erika Racette
+        June 15, 2024 - August 8, 2024
+        Estimated hours: 40
+
+        This is a Web Page that fulfills the requirements of parts 1,2,3,4 of TMA 1 
+
+        Instructions:
+        -Copy and Paste all assignment files inside TMA1 into a localhost server
+            ...\TMA1\tma1.htm
+        -Open tma1.html in a browser to get started and interact with the web page
+        -Use the nav menu to navigate to each part of the TMA:
+
+            Documentation: About
+            Part 1: Resume
+            Part 2: Web Learning
+            Part 3: Slideshow
+            Part 4: Utility Measurements
+
+        .../TMA1/shared - contains the Javascript and CSS files (styles.css for the main page, styles2.css for the web apps), as well as the wallpaper image for the header
+
+        Part 1
+        A XML version of my resume containing three sections: 
+            general information about me 
+            my educational background
+            my work experience
+        With a schema for the XML document, and an XSLT for the XML document so that it can be rendered in a browser.
+        All three XML-related files(resume.xml, resume.xsd, and resume.xsl) are located in .../TMA1/part1
+        Link: ...\TMA1\tma1.htm
+
+        Part 2
+        A web application that can help people to learn the technologies covered in Unit 1, Unit 2, and Unit 3 of the course (HTML5, CSS3, JavaScript, XML and Ajax).
+        All related files are inside of: ...TMA1\part2\
+        It has the following components:
+        1.	A web-based system called 'Web Tech Learning' with a banner, navigation menus and buttons. It begins with a welcome page to greet the users to explain what the application does, and what they get from it, and how they should proceed.
+        2.	The application has three pages of tutorials, accessible through navigation menus and buttons, to teach the technologies covered in Unit 1, Unit 2 and Unit 3.
+        3.	The HTML5 tutorial teaches 5 page-structure elements and 6 new input types.
+        4.	There is a quiz for each tutorial, which can be accessed right after the tutorial page, as well as through the navigation menus and buttons.
+        5.	After the submission button is hit, the quiz system grades the answers the learner has provided, and shows the correct answers as well as the score in percentage.
+        6.	The quiz system is designed so that questions can be easily edited, added, or deleted, and new quiz can be easily created by editing/copying/pasting the associated unit's XML file (unit1Quiz.xml, unit2Quiz.xml, unit3Quiz.xml).
+        7.	Uses the web technologies covered in Unit 1, unit 2 and Unit 3 (HTML5, CSS3, JavaScript, XML and Ajax).
+        8.	Uses an external style sheet for all pages of the system, to retain a consistent and user-friendly interface (...TMA1\shared\styles2.css).
+        9.	Does not use HTML5 tables to lay out the web page.
+        Link: ...\TMA1\part2\indexPart2.html
+
+        Part 3
+        A slideshow web application using HTML5 canvas and other web technologies. 
+        All related files are inside of: ...TMA1\part3\
+        It has the following components:
+        1.	The slideshow is drawn on the canvas.
+        2.	There is a caption for each image in the show.
+        3.	There is a button to start/stop the show.
+        4.	There are controls to toggle the show between random and sequential.
+        5.	There are buttons to manually turn the show backward or forward, only if the show is in sequential mode.
+        6.	There is a dropdown list for users to select a transition/transformation effect from at 3 different transition/transformation effects.
+        7.	The data of the images are in a JSON array so that images and their captions can be easily maintained.
+        8.	I used images/photos I took during a trip to Africa.
+        9.	The slideshow has 20 nice pictures, saved in the folder ...TMA1\part3\images.
+        Link: ...\TMA1\part3\indexPart3.html
+
+        Part 4
+        A web application that can provide users with utility tools.
+        All related files are inside of: ...TMA1\part4\
+        It has the following components:
+        o	Measurement converters: weights, lengths, areas, and volumes
+        o	A mortgage calculator
+        o	A utility tool that I think is useful: a timezone converter. 
+        The user can enter in their timezone and see what time it is in a different timezone area.
+        This utility is useful since a timezone converter is a practical tool that can help users easily coordinate 
+        and plan activities across different time zones. This benefits business professionals, travelers, remote workers, 
+        and users with international connections. It improves global communication, scheduling, and personal interactions/relationships.
+        I limited the included time-zones to just time-zones covered in Canada since there are a lot of time-zones. 
+        Link: ...\TMA1\part4\indexPart4.html
+
+        For Part 4, I separated each section of the Utility Tools web app into individual HTML files, which are located in the directory ...TMA1\part4\utility-tools. 
+        The files are as follows:
+            o   home.html
+            o   measurementConverter.html
+            o   mortgageCalculator.html
+            o   timeZoneConverter.html
+
+        The algorithms and formulas used in the tutorials are as follows:
+        Timezones-
+        https://time-time.net/times/time-zones/usa-canada/current-mountain-time-mst.php
+        https://www.w3schools.com/jsref/jsref_tolocalestring.asp
+        https://www.geeksforgeeks.org/how-to-convert-date-to-another-timezone-in-javascript/
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+        Measurements-
+        https://www.omnicalculator.com/conversion/weight-converter
+        https://www.omnicalculator.com/conversion/length-converter
+        https://www.calculatorsoup.com/calculators/conversions/area.php
+        https://www.omnicalculator.com/conversion/volume-conversion
+
+        Mortgage formula-
+        https://www.youtube.com/watch?v=6bLg_Ex0A-4
+
+        Algorithm Explanation:
+        The algorithm works as follows: 
+        -When a link is clicked, an AJAX function is triggered.
+        -This function chooses the appropriate HTML file to load, then uses AJAX to load it dynamically. 
+        -After loading, it initializes the required variables and attaches action listeners to the new elements.
+        -These listeners then execute predefined functions: convertMeasurements(), calculateMortgage(), convertTime()
+        -Rates and timezones are also predefined: 
+            weightConversionRates, lengthConversionRates, areaConversionRates, volumeConversionRates, timeZones
+
+        When switching between sections, the HTML elements are removed from the DOM and then re-added via AJAX. 
+        Since the JavaScript event listeners are attached to the specific instances of DOM elements, listeners attached to removed elements will not apply to the new elements.
+        So there is no need to destroy the action listeners or variables.
+
+        Background wallpaper retrieved with free use from: https://wallpaper.dog/sanrio-cinnamoroll 
+        -->
+        <header> <!-- banner title -->
+                <h1>Erika Racette</h1>
+        </header>
+
+        <div id = "menu"> <!-- menu div container -->
+            <nav>
+                <a href="#" id="aboutLink">About</a> <!-- info/documentation-->
+                <a href="#" id="resumeLink">Resume</a> <!-- Part1 -->
+                <a href="#" id="webLearningLink">Web Learning</a> <!-- Part2 -->
+                <a href="#" id="slideshowLink">Slideshow</a> <!-- Part3 -->
+                <a href="#" id="measurementsLink">Utility Measurements</a> <!-- Part4 -->
+            </nav>
+        </div>
+
+        <main id="mainID"> <!-- where each menu item content will be placed -->
+            
+            <!-- about section content -->
+            <section id="aboutContent">
+                <h1>COMP 466 Advanced Technologies for Web-Based Systems</h1>
+                <h2>TMA 1</h2>
+                <p><strong>Erika Racette</strong></p>
+                <p><strong>June 15, 2024 - August 8, 2024</strong></p>
+                <p><strong>Estimated hours:</strong> 40</p>
+            
+                <p>This is a Web Page that fulfills the requirements of parts 1, 2, 3, 4 of TMA 1</p>
+            
+                <h3>Instructions:</h3>
+                <ul>
+                    <li>Copy and Paste all assignment files inside TMA1 into a localhost server</li>
+                    <li><code>...\TMA1\tma1.htm</code></li>
+                    <li>Open <code>tma1.htm</code> in a browser to get started and interact with the web page</li>
+                    <li>Use the nav menu to navigate to each part of the TMA:
+                        <ul>
+                            <li><strong>Documentation:</strong> About</li>
+                            <li><strong>Part 1:</strong> Resume</li>
+                            <li><strong>Part 2:</strong> Web Learning</li>
+                            <li><strong>Part 3:</strong> Slideshow</li>
+                            <li><strong>Part 4:</strong> Utility Measurements</li>
+                        </ul></li>
+                    <li><code>...\TMA1\shared</code> - contains the Javascript and CSS files (styles.css for the main page, styles2.css for the web apps), as well as the wallpaper image for the header</li>
+                </ul>
+            
+                <h3>Part 1</h3>
+                <p>A XML version of my resume containing three sections:</p>
+                <ul>
+                    <li>General information about me</li>
+                    <li>My educational background</li>
+                    <li>My work experience</li>
+                </ul>
+                <p>With a schema for the XML document, and an XSLT for the XML document so that it can be rendered in a browser. All three XML-related files (<code>resume.xml</code>, <code>resume.xsd</code>, and <code>resume.xsl</code>) are located in <code>...\TMA1\part1</code></p>
+                <p>Link: ...\TMA1\tma1.htm</p>
+
+                <h3>Part 2</h3>
+                <p>A web application that can help people to learn the technologies covered in Unit 1, Unit 2, and Unit 3 of the course (HTML5, CSS3, JavaScript, XML, and Ajax). All related files are inside of: <code>...\TMA1\part2\</code></p>
+                <p>It has the following components:</p>
+                <ul>
+                    <li>A web-based system called 'Web Learning' with a banner, navigation menus, and buttons. It begins with a welcome page to greet the users, explaining what the application does, what they get from it, and how they should proceed.</li>
+                    <li>The application has three pages of tutorials, accessible through navigation menus and buttons, to teach the technologies covered in Unit 1, Unit 2, and Unit 3.</li>
+                    <li>The HTML5 tutorial teaches 5 page-structure elements and 6 new input types.</li>
+                    <li>There is a quiz for each tutorial, accessible right after the tutorial page, as well as through the navigation menus and buttons.</li>
+                    <li>After the submission button is hit, the quiz system grades the answers the learner has provided and shows the correct answers as well as the score in percentage.</li>
+                    <li>The quiz system is designed so that questions can be easily edited, added, or deleted, and new quizzes can be easily created by editing/copying/pasting the associated unit's XML file (<code>unit1Quiz.xml</code>, <code>unit2Quiz.xml</code>, <code>unit3Quiz.xml</code>).</li>
+                    <li>Uses the web technologies covered in Unit 1, Unit 2, and Unit 3 (HTML5, CSS3, JavaScript, XML, and Ajax).</li>
+                    <li>Uses an external style sheet for all pages of the system to retain a consistent and user-friendly interface (<code>...\TMA1\shared\styles2.css</code>).</li>
+                    <li>Does not use HTML5 tables to lay out the web page.</li>
+                </ul>
+                <p>Link: ...\TMA1\part2\indexPart2.html</p>
+            
+                <h3>Part 3</h3>
+                <p>A slideshow web application using HTML5 canvas and other web technologies. All related files are inside of: <code>...\TMA1\part3\</code></p>
+                <p>It has the following components:</p>
+                <ul>
+                    <li>The slideshow is drawn on the canvas.</li>
+                    <li>There is a caption for each image in the show.</li>
+                    <li>There is a button to start/stop the show.</li>
+                    <li>There are controls to toggle the show between random and sequential.</li>
+                    <li>There are buttons to manually turn the show backward or forward, only if the show is in sequential mode.</li>
+                    <li>There is a dropdown list for users to select a transition/transformation effect from at least 3 different transition/transformation effects.</li>
+                    <li>The data of the images are in a JSON array so that images and their captions can be easily maintained.</li>
+                    <li>I used images/photos I took during a trip to Africa.</li>
+                    <li>The slideshow has 20 nice pictures.</li>
+                </ul>
+                <p>Link: ...\TMA1\part3\indexPart3.html</p>
+            
+                <h3>Part 4</h3>
+                <p>A web application that can provide users with utility tools. All related files are inside of: <code>...\TMA1\part4\</code></p>
+                <p>It has the following components:</p>
+                <ul>
+                    <li>Measurement converters: weights, lengths, areas, and volumes</li>
+                    <li>A mortgage calculator</li>
+                    <li>A utility tool that I think is useful: a timezone converter. 
+                        The user can enter their timezone and see what time it is in a different timezone area. 
+                        This utility is useful since a timezone converter is a practical tool that can help users easily coordinate and plan activities across different time zones. 
+                        This benefits business professionals, travelers, remote workers, and users with international connections. 
+                        It improves global communication, scheduling, and personal interactions/relationships.
+                        I limited the included time-zones to just time-zones covered in Canada since there are a lot of time-zones. </li>
+                </ul>
+                <p>Link: ...\TMA1\part4\indexPart4.html</p>
+                <p>The files for Part 4 are as follows:</p>
+                <ul>
+                    <li><code>home.html</code></li>
+                    <li><code>measurementConverter.html</code></li>
+                    <li><code>mortgageCalculator.html</code></li>
+                    <li><code>timeZoneConverter.html</code></li>
+                </ul>
+
+                <p>The algorithms and formulas used in the tutorials are as follows:</p>
+
+                <p><strong>Timezones:</strong></p>
+                <ul>
+                    <li><a href="https://time-time.net/times/time-zones/usa-canada/current-mountain-time-mst.php" target="_blank">https://time-time.net/times/time-zones/usa-canada/current-mountain-time-mst.php</a></li>
+                    <li><a href="https://www.w3schools.com/jsref/jsref_tolocalestring.asp" target="_blank">https://www.w3schools.com/jsref/jsref_tolocalestring.asp</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/how-to-convert-date-to-another-timezone-in-javascript/" target="_blank">https://www.geeksforgeeks.org/how-to-convert-date-to-another-timezone-in-javascript/</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a></li>
+                    
+                </ul>
+
+                <p><strong>Measurements:</strong></p>
+                <ul>
+                    <li><a href="https://www.omnicalculator.com/conversion/weight-converter" target="_blank">https://www.omnicalculator.com/conversion/weight-converter</a></li>
+                    <li><a href="https://www.omnicalculator.com/conversion/length-converter" target="_blank">https://www.omnicalculator.com/conversion/length-converter</a></li>
+                    <li><a href="https://www.calculatorsoup.com/calculators/conversions/area.php" target="_blank">https://www.calculatorsoup.com/calculators/conversions/area.php</a></li>
+                    <li><a href="https://www.omnicalculator.com/conversion/volume-conversion" target="_blank">https://www.omnicalculator.com/conversion/volume-conversion</a></li>
+                </ul>
+
+                <p><strong>Mortgage Formula:</strong></p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=6bLg_Ex0A-4" target="_blank">https://www.youtube.com/watch?v=6bLg_Ex0A-4</a></li>
+                </ul>
+
+                <p><strong>Algorithm Explanation:</strong></p>
+                <ul>
+                    <li>When a link is clicked, an AJAX function is triggered.</li>
+                    <li>This function chooses the appropriate HTML file to load, then uses AJAX to load it dynamically.</li>
+                    <li>After loading, it initializes the required variables and attaches action listeners to the new elements.</li>
+                    <li>These listeners then execute predefined functions: <code>convertMeasurements()</code>, <code>calculateMortgage()</code>, <code>convertTime()</code></li>
+                    <li>Rates and timezones are also predefined: 
+                        <ul>
+                            <li><code>weightConversionRates</code>, <code>lengthConversionRates</code>, <code>areaConversionRates</code>, <code>volumeConversionRates</code>, <code>timeZones</code>
+                        </ul>
+                    </li>
+                    <li>When switching between sections, the HTML elements are removed from the DOM and then re-added via AJAX.</li>
+                    <li>Since the JavaScript event listeners are attached to the specific instances of DOM elements, listeners attached to removed elements will not apply to the new elements.</li>
+                    <li>So there is no need to destroy the action listeners or variables.</li>
+                </ul>
+                
+            
+                <i>Background wallpaper retrieved with free use from: <a href="https://wallpaper.dog/sanrio-cinnamoroll">https://wallpaper.dog/sanrio-cinnamoroll</a></i>
+            </section>
+
+            <!-- resume section content -->
+            <section id="resumeContent" style="display:none;"> 
+                <!-- resume content will be loaded here when appropriate menu item is clicked -->
+            </section>
+
+            <!-- web learning section content -->
+            <section id="webLearningContent" style="display:none;" class="mainSection"> 
+                <iframe id="webLearningFrame" src="part2/indexPart2.html" frameborder="0"></iframe> <!-- use an iframe to load in the new html web app -->
+            </section>
+
+            <!-- slideshow section content -->
+            <section id="slideshowContent" style="display:none;" class="mainSection"> 
+                <iframe id="slideshowFrame" src="part3/indexPart3.html" frameborder="0"></iframe>
+            </section>
+
+            <!-- measurement section content -->
+            <section id="measurementsContent" style="display:none;" class="mainSection"> 
+                <iframe id="measurementsFrame" src="part4/indexPart4.html" frameborder="0"></iframe>
+            </section>
+            
+
+        </main> <!-- end menu item content -->
+
+        <footer> <!-- the bottom of the web page -->
+            <p>COMP 466: Advanced Technologies for Web-Based Systems</p>
+        </footer>
+        
+        <!-- link the JavaScript file that will be used for the main page -->
+        <script src="shared/script.js"></script>
+
+    </body>
+
+</html>

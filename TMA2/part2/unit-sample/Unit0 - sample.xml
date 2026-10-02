@@ -1,0 +1,43 @@
+<unit>
+    <title>Introduction</title> <!-- Define the title of your unit here-->
+    
+    <content> <!-- Insert the content of the course/unit here-->     
+
+        <header>For Learners:</header>
+        <list>
+            <item>Unit-Based Learning: Each section of the course is organized into units, with each focusing on a specific topic.</item>
+            <item>Interactive Quizzes: Each section comes with a quiz to test you on what you've learned. No need to worry! Quiz scores are not saved. You can progress regardless of quiz scores. Mistakes are welcome and corrections are shown to help you learn.</item>
+            <item>Unlock Units: To progress to the next unit, you'll need to complete the quiz for the unit you're currently on.</item>
+        </list>
+   
+        <header>Welcome to the Tagalog Learning Tutorial!</header>
+            
+            <text>In this tutorial, you will learn basic Tagalog vocabulary, pronouns, and sentence structures.</text>
+            <text>This course is designed to help you get familiar with basic Tagalog expressions for everyday conversations.</text>
+            
+            <text>The course is divided into multiple lessons, focusing on:</text>
+            
+            <list>
+                <item>Unit 1: Pronouns, Feelings, and Introductions</item>
+                <item>Unit 2: Pronouns and Job Titles</item>
+                <item>Unit 3: Possessive Pronouns and Relationships</item>
+                <item>Unit 4: 'Sa' and Personal Pronouns</item>
+                <item>Unit 5: How to ask questions using 'Ba' and the 'Na' linker</item>
+            </list>
+            
+            <text>At the end of each level, there will be quizzes to test your understanding!</text>
+    </content>
+
+    <questions>
+        <!-- First Question -->
+        <question>
+            <text>What language will you be learning?</text> <!-- Question text -->
+            <answers> <!-- Answer options -->
+                <answer correct="false">English</answer> <!-- Correct answer -->
+                <answer correct="true">Tagalog</answer>
+                <answer correct="false">Spanish</answer>
+            </answers>
+        </question>
+        <!-- More questions can be added here -->
+    </questions>
+</unit>

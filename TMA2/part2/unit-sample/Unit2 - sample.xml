@@ -1,0 +1,87 @@
+<unit>
+    <title>Unit 2: Pronouns, Job Titles and 'Si'</title>
+    
+    <content>
+        <!-- Introduction -->
+        <text>In this lesson, you will learn pronouns and basic job titles in Tagalog.</text>
+
+        <header>PRONOUNS</header>
+        <text>These pronouns are used to refer to people in various contexts:</text>
+        <list>
+            <item>Ako: I</item>
+            <item>Ka: You (Singular, informal)</item>
+            <item>Siya: He/She</item>
+            <item>Tayo: We (Inclusive)</item>
+            <item>Kami: We (Exclusive)</item>
+            <item>Kayo: You (Plural, or formal singular)</item>
+            <item>Sila: They</item>
+        </list>
+
+        <header>JOB TITLES</header>
+        <text>Here are some titles that you will encounter in Tagalog conversations:</text>
+        <list>
+            <item>Guro: Teacher</item>
+            <item>Doktor: Doctor</item>
+            <item>Nars: Nurse</item>
+            <item>Pulis: Policeman</item>
+            <item>Estudyante: Student</item>
+        </list>
+
+        <header>NOMINATIVE PRONOUNS EXAMPLES</header>
+        <text>Here are some examples of nominative pronouns in action:</text>
+        <list>
+            <item>Estudyante ako: I am a student</item>
+            <item>Guro ka: You are a teacher</item>
+            <item>Nars tayo: We are nurses</item>
+        </list>
+
+        <header>IKAW vs KA</header>
+        <text>IKAW refers directly to one person where KA is used more as a pronoun in the sentence after the verb. It is a shortened version of ikaw.</text>
+        <list>
+            <item>Ikaw si Jennifer: You are Jennifer</item>
+            <item>Si Jennifer ka: You are Jennifer</item>
+        </list>
+
+        <header>'Si'</header>
+        <text>'Si' is a singular marker used before a name of a person:</text>
+        <list>
+            <item>Ako si Jennifer.</item>
+            <item>Ikaw si Jennifer.</item>
+            <item>Siya si Jennifer.</item>
+        </list>
+
+        <text>Philippines National anthem: Lupang Hinirang</text>
+    </content>
+
+    <questions>
+        <!-- First Question -->
+        <question>
+            <text>What is the Tagalog translation of "I am a student"?</text>
+            <answers>
+                <answer correct="true">Estudyante ako</answer>
+                <answer correct="false">Guro ka</answer>
+                <answer correct="false">Pulis kayo</answer>
+            </answers>
+        </question>
+
+        <!-- Second Question -->
+        <question>
+            <text>How do you say "We are nurses" (exclusive)?</text>
+            <answers>
+                <answer correct="true">Nars kami</answer>
+                <answer correct="false">Nars tayo</answer>
+                <answer correct="false">Nars kayo</answer>
+            </answers>
+        </question>
+
+        <!-- Third Question -->
+        <question>
+            <text>How do you say "You are a teacher" in Tagalog?</text>
+            <answers>
+                <answer correct="false">Guro ako</answer>
+                <answer correct="true">Guro ka</answer>
+                <answer correct="false">Estudyante ako</answer>
+            </answers>
+        </question>
+    </questions>
+</unit>
